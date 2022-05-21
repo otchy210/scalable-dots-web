@@ -6,7 +6,9 @@
     "build": "webpack",
     "watch": "webpack -w",
     "start": "webpack-dev-server",
-    "test": "jest"
+    "test": "jest",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix"
   },
   "repository": {
     "type": "git",
@@ -22,7 +24,11 @@
   "devDependencies": {
     "@jest/types": "^28.1.0",
     "@types/jest": "^27.5.1",
+    "@typescript-eslint/eslint-plugin": "^5.25.0",
+    "@typescript-eslint/parser": "^5.25.0",
     "css-loader": "^6.7.1",
+    "eslint": "^8.16.0",
+    "eslint-config-prettier": "^8.5.0",
     "jest": "^28.1.0",
     "jest-transform-stub": "^2.0.0",
     "prettier": "^2.6.2",
