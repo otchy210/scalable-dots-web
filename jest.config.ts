@@ -7,8 +7,8 @@ const config: Config.InitialOptions = {
   collectCoverage: true,
   errorOnDeprecated: true,
   transform: {
-    '^.+\\.scss$': 'jest-transform-stub'
-  }
+    '^.+\\.scss$': 'jest-transform-stub',
+  },
 };
 
 export default config;
