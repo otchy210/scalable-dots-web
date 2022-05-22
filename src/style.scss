@@ -1,6 +1,41 @@
-.bg-theme {
-  background-color: #e8d8c7 !important;
+:root {
+  --main-color: #514421;
+  --bg-color: #e8d8c7;
 }
-.navbar-brand > img {
-  height: 32px;
+body {
+  color: var(--main-color);
+}
+.jumbotron {
+  background-color: #6aa0ff;
+  background-image: url(/images/jumbotron-bg.svg);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: contain;
+
+  border-top: solid 2px var(--main-color);
+  border-bottom: solid 2px var(--main-color);
+  padding-bottom: 8%;
+
+  .logo-wrapper {
+    width: 100%;
+    max-width: 240px;
+    background-color: var(--bg-color);
+    border: solid 2px var(--main-color);
+    border-radius: 2px;
+  }
+  .dialog {
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 2px;
+    border: solid 2px var(--main-color);
+  }
+}
+.information {
+  background: linear-gradient(var(--bg-color), #fff);
+  h1 {
+    text-align: center;
+    small {
+      display: block;
+      font-size: 0.5em;
+    }
+  }
 }

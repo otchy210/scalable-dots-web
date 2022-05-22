@@ -18,21 +18,90 @@
     <script src="/script.js"></script>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-theme">
+    <div class="jumbotron pt-3">
       <div class="container">
-        <a class="navbar-brand" href="#">
-          <img
-            src="/images/logo.svg"
-            class="d-none d-sm-inline"
-            alt="Scalable Dots"
-          />
-          <img
-            src="/images/icon.svg"
-            class="d-inline d-sm-none"
-            alt="Scalable Dots"
-          />
-        </a>
+        <div class="row">
+          <div class="col-12 col-md-3">
+            <div class="d-flex justify-content-center pb-3">
+              <div class="logo-wrapper">
+                <img src="/images/logo.svg" alt="Scalable Dots" />
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-8 col-md-6 mb-3 mb-sm-0">
+            <div class="dialog p-3">
+              <div>(icon will be here)</div>
+              <div>
+                画像ファイルをドロップもしくは<a href="#">選択</a>もしくは...
+              </div>
+              <div>とりあえず試す？</div>
+              <select class="form-select">
+                <option selected>サンプル画像を選択</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-12 col-sm-4 col-md-3">
+            <div class="dialog p-3">
+              百聞は一見に如かず
+              <div class="btn-group" role="group">
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="btnradio"
+                  id="btnradio1"
+                  autocomplete="off"
+                  checked
+                />
+                <label class="btn btn-outline-primary" for="btnradio1"
+                  >SVG</label
+                >
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="btnradio"
+                  id="btnradio2"
+                  autocomplete="off"
+                />
+                <label class="btn btn-outline-primary" for="btnradio2"
+                  >PNG</label
+                >
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </nav>
+    </div>
+    <div class="information pt-3">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h1>
+              ドット絵は SVG 画像にすれば拡大出来る！<small
+                >ドット絵なのにベクター？そう、二アレストネイバー法なんてもう知らなくてもいい！</small
+              >
+            </h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <h2>ScalableDots とは</h2>
+          </div>
+          <div class="col">
+            <h2>なぜ SVG が良いのか</h2>
+          </div>
+          <div class="col">
+            <h2>ブラウザ完結型ツール</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <h2>コマンドラインツール</h2>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
