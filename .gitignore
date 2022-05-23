@@ -1,3 +1,5 @@
 node_modules/
 coverage/
 notes.txt
+local_resources/
+.DS_Store
