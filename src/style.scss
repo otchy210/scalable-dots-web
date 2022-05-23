@@ -1,12 +1,17 @@
+// Bootstrap overide
+
+// body {
+//   // temporary override
+//   color: var(--main-color);
+// }
+
+@import '~bootstrap/scss/bootstrap.scss';
+
 :root {
-  // temporary variables
   --main-color: #514421;
   --bg-color: #e8d8c7;
 }
-body {
-  // temporary override
-  color: var(--main-color);
-}
+
 .jumbotron {
   background-color: #6aa0ff;
   background-image: url(/images/jumbotron-bg.svg);
