@@ -1,43 +1,56 @@
-// Bootstrap overide
+////////////////////////
+//  Bootstrap overide
+////////////////////////
 
-// body {
-//   // temporary override
-//   color: var(--main-color);
-// }
+// Required
+@import '../node_modules/bootstrap/scss/functions';
 
+// Default variable overrides
+$primary: #514421;
+$light: #e8d8c7;
+$body-color: $primary;
+
+// Required
+@import '../node_modules/bootstrap/scss/variables';
+@import '../node_modules/bootstrap/scss/mixins';
+
+// Optional
 @import '~bootstrap/scss/bootstrap.scss';
+// TODO: optimize import -> https://getbootstrap.jp/docs/5.0/customize/sass/
+// @import "../node_modules/bootstrap/scss/root";
+// @import "../node_modules/bootstrap/scss/reboot";
+// @import "../node_modules/bootstrap/scss/type";
 
-:root {
-  --main-color: #514421;
-  --bg-color: #e8d8c7;
-}
+////////////////////////
+//  Specific styles
+////////////////////////
 
 .jumbotron {
-  background-color: #6aa0ff;
+  background-color: $blue-300;
   background-image: url(/images/jumbotron-bg.svg);
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: contain;
 
-  border-top: solid 2px var(--main-color);
-  border-bottom: solid 2px var(--main-color);
+  border-top: solid 2px $primary;
+  border-bottom: solid 2px $primary;
   padding-bottom: 8%;
 
   .logo-wrapper {
     width: 100%;
     max-width: 240px;
-    background-color: var(--bg-color);
-    border: solid 2px var(--main-color);
+    background-color: $light;
+    border: solid 2px $primary;
     border-radius: 2px;
   }
   .dialog {
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(var(--bs-white-rgb), 0.6);
     border-radius: 2px;
-    border: solid 2px var(--main-color);
+    border: solid 2px $primary;
   }
 }
 .information {
-  background: linear-gradient(var(--bg-color), #fff);
+  background: linear-gradient($light, $white);
   h1 {
     text-align: center;
     small {

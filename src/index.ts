@@ -1,5 +1,6 @@
 import './style.scss';
 // import 'bootstrap';
+// TODO: optimize import https://getbootstrap.jp/docs/5.0/customize/optimize/
 
 console.log('index.ts');
 
