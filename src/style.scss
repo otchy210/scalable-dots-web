@@ -28,8 +28,21 @@ $body-color: $primary;
 .jumbotron {
   background-color: $blue-300;
   background-repeat: no-repeat;
-  background-position: center bottom;
-  background-size: 100%;
+  background-position: right bottom;
+  background-size: 200%;
+  @include media-breakpoint-up(sm) {
+    background-size: 160%;
+  }
+  @include media-breakpoint-up(md) {
+    background-position: center bottom;
+    background-size: 120%;
+  }
+  @include media-breakpoint-up(lg) {
+    background-size: 100%;
+  }
+  @include media-breakpoint-up(xxl) {
+    background-size: 80%;
+  }
 
   border-top: solid 2px $primary;
   border-bottom: solid 2px $primary;
@@ -52,6 +65,25 @@ $body-color: $primary;
     background-color: rgba(var(--bs-white-rgb), 0.6);
     border-radius: 2px;
     border: solid 2px $primary;
+  }
+  .drop-here {
+    border: dotted 2px $primary;
+    border-radius: 8px;
+    img {
+      width: 32px;
+    }
+    @include media-breakpoint-up(md) {
+      border-width: 3px;
+      img {
+        width: 48px;
+      }
+    }
+    @include media-breakpoint-up(xxl) {
+      border-width: 4px;
+      img {
+        width: 64px;
+      }
+    }
   }
 }
 .information {
