@@ -64,5 +64,11 @@ module.exports = {
     {
       module: /\.\/src\/style\.scss/,
     },
+    {
+      message: /entrypoint size limit/,
+    },
+    {
+      message: /webpack performance recommendations/,
+    },
   ],
 };

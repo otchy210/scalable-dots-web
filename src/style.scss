@@ -27,14 +27,19 @@ $body-color: $primary;
 
 .jumbotron {
   background-color: $blue-300;
-  background-image: url(/images/jumbotron-bg.svg);
   background-repeat: no-repeat;
   background-position: center bottom;
-  background-size: contain;
+  background-size: 100%;
 
   border-top: solid 2px $primary;
   border-bottom: solid 2px $primary;
   padding-bottom: 8%;
+  &.bg-svg {
+    background-image: url(/images/jumbotron-bg.svg);
+  }
+  &.bg-png {
+    background-image: url(/images/jumbotron-bg.png);
+  }
 
   .logo-wrapper {
     width: 100%;
