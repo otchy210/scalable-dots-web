@@ -1,5 +1,8 @@
-import { handleOnClickBgToggle } from './listeners/handleOnClickBgToggle';
+import { handleOnClickJumbotronBg } from './listeners/handleOnClickJumbotronBg';
+import { handleOnClickPreviewBg } from './listeners/handleOnClickPreviewBg';
+import { handleWindowResize } from './listeners/handleWindowResize';
 import './style.scss';
+import { ClickEventListener, WindowResizeListener } from './types';
 // import 'bootstrap';
 // TODO: optimize import https://getbootstrap.jp/docs/5.0/customize/optimize/
 
@@ -9,7 +12,10 @@ export const hello = (name: string) => {
   return `hello ${name}`;
 };
 
-const clickEventListeners: ClickEventListener[] = [handleOnClickBgToggle];
+const clickEventListeners: ClickEventListener[] = [
+  handleOnClickJumbotronBg,
+  handleOnClickPreviewBg,
+];
 document.addEventListener('click', (e: MouseEvent) => {
   const target = e.target as HTMLElement;
   if (!target) {
@@ -23,3 +29,12 @@ document.addEventListener('click', (e: MouseEvent) => {
       listener.handle(target);
     });
 });
+
+const windowResizeListeners: WindowResizeListener[] = [handleWindowResize];
+const windowResizeListener = () => {
+  windowResizeListeners.forEach((listener) => {
+    listener.handle();
+  });
+};
+window.addEventListener('resize', windowResizeListener);
+window.addEventListener('load', windowResizeListener);

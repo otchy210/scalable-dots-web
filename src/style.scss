@@ -14,6 +14,9 @@ $body-color: $primary;
 @import '../node_modules/bootstrap/scss/variables';
 @import '../node_modules/bootstrap/scss/mixins';
 
+// additional variable overrides
+$form-range-track-bg: rgba(var(--bs-white-rgb), 0.7);
+
 // Optional
 @import '~bootstrap/scss/bootstrap.scss';
 // TODO: optimize import -> https://getbootstrap.jp/docs/5.0/customize/sass/
@@ -86,6 +89,16 @@ $body-color: $primary;
         width: 64px;
       }
     }
+  }
+}
+.preview {
+  background-color: $light;
+  label.h5 {
+    display: block;
+  }
+  .svg {
+    width: 100%;
+    overflow: auto;
   }
 }
 .information {

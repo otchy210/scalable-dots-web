@@ -50,27 +50,151 @@
                 <input
                   type="radio"
                   class="btn-check"
-                  name="bg-toggle"
+                  name="jumbotron-bg"
                   value="svg"
-                  id="bg-toggle-svg"
+                  id="jumbotron-bg-svg"
                   autocomplete="off"
                   checked
                 />
-                <label class="btn btn-outline-primary" for="bg-toggle-svg"
+                <label class="btn btn-outline-primary" for="jumbotron-bg-svg"
                   >SVG</label
                 >
                 <input
                   type="radio"
                   class="btn-check"
-                  name="bg-toggle"
+                  name="jumbotron-bg"
                   value="png"
-                  id="bg-toggle-png"
+                  id="jumbotron-bg-png"
                   autocomplete="off"
                 />
-                <label class="btn btn-outline-primary" for="bg-toggle-png"
+                <label class="btn btn-outline-primary" for="jumbotron-bg-png"
                   >PNG</label
                 >
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="preview pt-3">
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-12 col-sm-4 col-md-3 col-xl-2 offset-md-1 offset-xl-2"
+          >
+            <div class="container px-0">
+              <div class="row">
+                <div class="col-12 d-flex">
+                  <img
+                    src="https://dummyimage.com/32x32/666/fff.png"
+                    class="img-thumbnail mx-auto bg-black"
+                  />
+                </div>
+                <div class="col-12">
+                  <label class="h5 mt-3">タイプ</label>
+                  <div class="btn-group" role="group">
+                    <input
+                      type="radio"
+                      class="btn-check"
+                      name="type"
+                      value="square"
+                      id="type-square"
+                      autocomplete="off"
+                      checked
+                    />
+                    <label class="btn btn-outline-primary" for="type-square"
+                      >■</label
+                    >
+                    <input
+                      type="radio"
+                      class="btn-check"
+                      name="type"
+                      value="circle"
+                      id="type-circle"
+                      autocomplete="off"
+                    />
+                    <label class="btn btn-outline-primary" for="type-circle"
+                      >●</label
+                    >
+                    <input
+                      type="radio"
+                      class="btn-check"
+                      name="type"
+                      value="rhombus"
+                      id="type-rhombus"
+                      autocomplete="off"
+                    />
+                    <label class="btn btn-outline-primary" for="type-rhombus"
+                      >◆</label
+                    >
+                  </div>
+                </div>
+                <div class="col-6 col-sm-12">
+                  <label for="size" class="form-label h5 mt-3"
+                    >サイズ<small>[16]</small></label
+                  >
+                  <input
+                    type="range"
+                    class="form-range"
+                    min="0"
+                    max="32"
+                    id="size"
+                    value="16"
+                  />
+                </div>
+                <div class="col-6 col-sm-12">
+                  <label for="gap" class="form-label h5 mt-3"
+                    >すき間<small>[1]</small></label
+                  >
+                  <input
+                    type="range"
+                    class="form-range"
+                    min="0"
+                    max="32"
+                    id="gap"
+                    value="1"
+                  />
+                </div>
+              </div>
+              <div class="col-12">
+                <hr />
+              </div>
+              <div class="col-12">
+                <label class="h5 mt-3">プレビュー背景</label>
+                <div class="btn-group" role="group">
+                  <input
+                    type="radio"
+                    class="btn-check"
+                    name="preview-bg"
+                    value="black"
+                    id="preview-bg-black"
+                    autocomplete="off"
+                    checked
+                  />
+                  <label class="btn btn-outline-primary" for="preview-bg-black"
+                    >黒</label
+                  >
+                  <input
+                    type="radio"
+                    class="btn-check"
+                    name="preview-bg"
+                    value="white"
+                    id="preview-bg-white"
+                    autocomplete="off"
+                  />
+                  <label class="btn btn-outline-primary" for="preview-bg-white"
+                    >白</label
+                  >
+                </div>
+              </div>
+              <div class="col-12 d-grid mt-3">
+                <button class="btn btn-primary" type="button">保存</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-8 col-md-7 col-xl-6 mt-3 mt-sm-0">
+            <div class="svg bg-black">
+              <img src="/images/jumbotron-bg.svg" />
             </div>
           </div>
         </div>
