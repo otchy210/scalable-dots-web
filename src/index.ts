@@ -1,3 +1,4 @@
+import { initOnChangeSelectFileHandler } from './listeners/handleOnChangeSelectFile';
 import { handleOnClickJumbotronBg } from './listeners/handleOnClickJumbotronBg';
 import { handleOnClickPreviewBg } from './listeners/handleOnClickPreviewBg';
 import { handleWindowResize } from './listeners/handleWindowResize';
@@ -37,4 +38,7 @@ const windowResizeListener = () => {
   });
 };
 window.addEventListener('resize', windowResizeListener);
-window.addEventListener('load', windowResizeListener);
+window.addEventListener('load', () => {
+  windowResizeListener();
+  initOnChangeSelectFileHandler();
+});

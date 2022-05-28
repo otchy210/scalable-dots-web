@@ -90,9 +90,19 @@ $form-range-track-bg: rgba(var(--bs-white-rgb), 0.7);
       }
     }
   }
+  .select-file {
+    text-decoration: underline;
+    cursor: pointer;
+    input {
+      display: none;
+    }
+  }
 }
 .preview {
+  height: 0px;
+  overflow: hidden;
   background-color: $light;
+  transition: height 0.2s;
   label.h5 {
     display: block;
   }

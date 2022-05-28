@@ -32,14 +32,18 @@
                 </div>
               </div>
               <div>
-                画像ファイルをドロップもしくは<a href="#">選択</a>もしくは...
+                画像ファイルをドロップもしくは<label class="select-file"
+                  >選択<input
+                    type="file"
+                    accept="image/gif,image/jpeg,image/png,image/webp" /></label
+                >もしくは...
               </div>
               <div>とりあえず試す？</div>
               <select class="form-select">
                 <option selected>サンプル画像を選択</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
+                <option value="1">ああああ (提供: @abc)</option>
+                <option value="2">いいいい (提供: @def)</option>
+                <option value="3">うううう (提供: @ghi)</option>
               </select>
             </div>
           </div>
@@ -76,8 +80,8 @@
         </div>
       </div>
     </div>
-    <div class="preview pt-3">
-      <div class="container">
+    <div class="preview">
+      <div class="container pt-3">
         <div class="row">
           <div
             class="col-12 col-sm-4 col-md-3 col-xl-2 offset-md-1 offset-xl-2"
@@ -85,10 +89,7 @@
             <div class="container px-0">
               <div class="row">
                 <div class="col-12 d-flex">
-                  <img
-                    src="https://dummyimage.com/32x32/666/fff.png"
-                    class="img-thumbnail mx-auto bg-black"
-                  />
+                  <img src="" class="img-thumbnail mx-auto bg-black" />
                 </div>
                 <div class="col-12">
                   <label class="h5 mt-3">タイプ</label>
