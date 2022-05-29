@@ -1,15 +1,9 @@
-import { nullsafeQuerySelector } from '../common/nullsafeQuerySeletor';
+import { getFileInput, getPreviewThumbnail } from '../common/elements';
 import { openPreview } from '../common/openPreview';
 
 export const initOnChangeSelectFileHandler = () => {
-  const fileInput =
-    nullsafeQuerySelector<HTMLInputElement>('.select-file input');
-  const previewThumbnail = nullsafeQuerySelector<HTMLImageElement>(
-    '.preview .img-thumbnail'
-  );
-  if (!fileInput || !previewThumbnail) {
-    return;
-  }
+  const fileInput = getFileInput();
+  const previewThumbnail = getPreviewThumbnail();
   fileInput.addEventListener('change', () => {
     if (!fileInput.files || !fileInput.files[0]) {
       return;
