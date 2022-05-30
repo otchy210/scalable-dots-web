@@ -1,6 +1,6 @@
 {
   "name": "@otchy/scalable-dots-web",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "",
   "scripts": {
     "build": "webpack",
@@ -49,6 +49,7 @@
     "webpack-dev-server": "^4.9.0"
   },
   "dependencies": {
+    "@otchy/scalable-dots-core": "^0.2.3",
     "@popperjs/core": "^2.11.5",
     "bootstrap": "^5.1.3"
   }
