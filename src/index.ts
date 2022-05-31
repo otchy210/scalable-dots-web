@@ -1,4 +1,6 @@
 import { initOnChangeSelectFileHandler } from './listeners/handleOnChangeSelectFile';
+import { initOnInputSvgOptionsHandlers } from './listeners/handleOnInputSvgOptions';
+import { handleOnClickDotType } from './listeners/handleOnClickDotType';
 import { handleOnClickJumbotronBg } from './listeners/handleOnClickJumbotronBg';
 import { handleOnClickPreviewBg } from './listeners/handleOnClickPreviewBg';
 import { handleWindowResize } from './listeners/handleWindowResize';
@@ -16,6 +18,7 @@ export const hello = (name: string) => {
 const clickEventListeners: ClickEventListener[] = [
   handleOnClickJumbotronBg,
   handleOnClickPreviewBg,
+  handleOnClickDotType,
 ];
 document.addEventListener('click', (e: MouseEvent) => {
   const target = e.target as HTMLElement;
@@ -41,4 +44,5 @@ window.addEventListener('resize', windowResizeListener);
 window.addEventListener('load', () => {
   windowResizeListener();
   initOnChangeSelectFileHandler();
+  initOnInputSvgOptionsHandlers();
 });
