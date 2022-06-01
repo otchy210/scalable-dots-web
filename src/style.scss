@@ -85,6 +85,7 @@ $form-range-track-bg: rgba(var(--bs-white-rgb), 0.7);
     cursor: pointer;
     img {
       width: 32px;
+      pointer-events: none;
     }
     @include media-breakpoint-up(md) {
       border-width: 3px;
