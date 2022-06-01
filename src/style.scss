@@ -25,6 +25,14 @@ $form-range-track-bg: rgba(var(--bs-white-rgb), 0.7);
 // @import "../node_modules/bootstrap/scss/type";
 
 ////////////////////////
+//  Additional utilities
+////////////////////////
+
+.bg-gray {
+  background-color: $gray-500;
+}
+
+////////////////////////
 //  Specific styles
 ////////////////////////
 

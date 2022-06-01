@@ -9,7 +9,7 @@ export const handleOnClickPreviewBg: ClickEventListener = {
     const thumbnail = getPreviewThumbnail();
     const svgHolder = getSvgHolder();
     [thumbnail, svgHolder].forEach((el) => {
-      el.classList.remove('bg-black', 'bg-white');
+      el.classList.remove('bg-black', 'bg-gray', 'bg-white');
       el.classList.add(`bg-${target.getAttribute('value')}`);
     });
   },
