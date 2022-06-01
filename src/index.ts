@@ -6,6 +6,7 @@ import { handleOnClickPreviewBg } from './listeners/handleOnClickPreviewBg';
 import { handleWindowResize } from './listeners/handleWindowResize';
 import './style.scss';
 import { ClickEventListener, WindowResizeListener } from './types';
+import { handleOnClickDropHere } from './listeners/handleOnClickDropHere';
 // import 'bootstrap';
 // TODO: optimize import https://getbootstrap.jp/docs/5.0/customize/optimize/
 
@@ -19,6 +20,7 @@ const clickEventListeners: ClickEventListener[] = [
   handleOnClickJumbotronBg,
   handleOnClickPreviewBg,
   handleOnClickDotType,
+  handleOnClickDropHere,
 ];
 document.addEventListener('click', (e: MouseEvent) => {
   const target = e.target as HTMLElement;

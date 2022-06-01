@@ -74,6 +74,7 @@ $form-range-track-bg: rgba(var(--bs-white-rgb), 0.7);
   .drop-here {
     border: dotted 2px $primary;
     border-radius: 8px;
+    cursor: pointer;
     img {
       width: 32px;
     }
