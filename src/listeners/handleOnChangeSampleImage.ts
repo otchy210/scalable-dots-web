@@ -1,14 +1,20 @@
-import { getPreviewThumbnail, getSampleImage } from '../common/elements';
+import {
+  getFileName,
+  getPreviewThumbnail,
+  getSampleImage,
+} from '../common/elements';
 
 export const initOnChangeSampleImageHandler = () => {
   const sampleImage = getSampleImage();
-  const previewThumbnail = getPreviewThumbnail();
   sampleImage.addEventListener('change', () => {
-    const fileName = sampleImage.value;
-    if (!fileName) {
+    const name = sampleImage.value;
+    if (!name) {
       return;
     }
-    const sampleImageUrl = `/sample-images/${fileName}`;
+    const fileName = getFileName();
+    fileName.innerHTML = name;
+    const sampleImageUrl = `/sample-images/${name}`;
+    const previewThumbnail = getPreviewThumbnail();
     previewThumbnail.setAttribute('src', sampleImageUrl);
   });
 };

@@ -46,6 +46,11 @@ export const getPreviewThumbnail = () => {
   ));
 };
 
+let fileName: HTMLDivElement;
+export const getFileName = () => {
+  return (fileName = queryIfNoElementGiven(fileName, '.file-name'));
+};
+
 let svgHolder: HTMLDivElement;
 export const getSvgHolder = () => {
   return (svgHolder = queryIfNoElementGiven(svgHolder, '.svg-holder'));
