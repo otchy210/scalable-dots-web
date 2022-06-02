@@ -7,6 +7,8 @@ import { handleWindowResize } from './listeners/handleWindowResize';
 import './style.scss';
 import { ClickEventListener, WindowResizeListener } from './types';
 import { handleOnClickDropHere } from './listeners/handleOnClickDropHere';
+import { initOnLoadPreviewThumbnailHandler } from './listeners/handleOnLoadPreviewThumbnail';
+import { initOnChangeSampleImageHandler } from './listeners/handleOnChangeSampleImage';
 // import 'bootstrap';
 // TODO: optimize import https://getbootstrap.jp/docs/5.0/customize/optimize/
 
@@ -37,14 +39,16 @@ document.addEventListener('click', (e: MouseEvent) => {
 });
 
 const windowResizeListeners: WindowResizeListener[] = [handleWindowResize];
-const windowResizeListener = () => {
+const initWindowResizeHandlers = () => {
   windowResizeListeners.forEach((listener) => {
     listener.handle();
   });
 };
-window.addEventListener('resize', windowResizeListener);
+window.addEventListener('resize', initWindowResizeHandlers);
 window.addEventListener('load', () => {
-  windowResizeListener();
+  initWindowResizeHandlers();
+  initOnLoadPreviewThumbnailHandler();
   initOnChangeSelectFileHandler();
+  initOnChangeSampleImageHandler();
   initOnInputSvgOptionsHandlers();
 });

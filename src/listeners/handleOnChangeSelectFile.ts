@@ -1,7 +1,4 @@
 import { getFileInput, getPreviewThumbnail } from '../common/elements';
-import { updateImageData } from '../common/imageData';
-import { openPreview } from '../common/openPreview';
-import { updateSvg } from '../common/updateSvg';
 
 export const initOnChangeSelectFileHandler = () => {
   const fileInput = getFileInput();
@@ -15,11 +12,6 @@ export const initOnChangeSelectFileHandler = () => {
     reader.addEventListener('load', () => {
       const dataURL = reader.result as string;
       previewThumbnail.setAttribute('src', dataURL);
-    });
-    previewThumbnail.addEventListener('load', () => {
-      updateImageData();
-      updateSvg();
-      openPreview();
     });
     reader.readAsDataURL(file);
   });

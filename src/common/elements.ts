@@ -28,6 +28,11 @@ export const getFileInput = () => {
   return (fileInput = queryIfNoElementGiven(fileInput, '.select-file input'));
 };
 
+let sampleImage: HTMLSelectElement;
+export const getSampleImage = () => {
+  return (sampleImage = queryIfNoElementGiven(sampleImage, '.sample-image'));
+};
+
 let preview: HTMLDivElement;
 export const getPreview = () => {
   return (preview = queryIfNoElementGiven(preview, '.preview'));
