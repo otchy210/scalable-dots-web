@@ -1,6 +1,6 @@
 import { getPreview } from './elements';
 
-export const openPreview = () => {
+export const setPreviewHeight = () => {
   const preview = getPreview();
   const container = preview.children[0];
   const height = container.getBoundingClientRect().height;

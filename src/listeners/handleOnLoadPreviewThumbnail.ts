@@ -1,6 +1,6 @@
 import { getPreviewThumbnail } from '../common/elements';
 import { updateImageData } from '../common/imageData';
-import { openPreview } from '../common/openPreview';
+import { setPreviewHeight } from '../common/setPreviewHeight';
 import { updateSvg } from '../common/updateSvg';
 
 export const initOnLoadPreviewThumbnailHandler = () => {
@@ -8,6 +8,6 @@ export const initOnLoadPreviewThumbnailHandler = () => {
   previewThumbnail.addEventListener('load', () => {
     updateImageData();
     updateSvg();
-    openPreview();
+    setPreviewHeight();
   });
 };

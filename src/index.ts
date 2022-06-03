@@ -3,9 +3,9 @@ import { initOnInputSvgOptionsHandlers } from './listeners/handleOnInputSvgOptio
 import { handleOnClickDotType } from './listeners/handleOnClickDotType';
 import { handleOnClickJumbotronBg } from './listeners/handleOnClickJumbotronBg';
 import { handleOnClickPreviewBg } from './listeners/handleOnClickPreviewBg';
-import { handleWindowResize } from './listeners/handleWindowResize';
+import { onWindowResize } from './listeners/onWindowResize';
 import './style.scss';
-import { ClickEventListener, WindowResizeListener } from './types';
+import { ClickEventListener } from './types';
 import { handleOnClickDropHere } from './listeners/handleOnClickDropHere';
 import { initOnLoadPreviewThumbnailHandler } from './listeners/handleOnLoadPreviewThumbnail';
 import { initOnChangeSampleImageHandler } from './listeners/handleOnChangeSampleImage';
@@ -38,15 +38,8 @@ document.addEventListener('click', (e: MouseEvent) => {
     });
 });
 
-const windowResizeListeners: WindowResizeListener[] = [handleWindowResize];
-const initWindowResizeHandlers = () => {
-  windowResizeListeners.forEach((listener) => {
-    listener.handle();
-  });
-};
-window.addEventListener('resize', initWindowResizeHandlers);
+window.addEventListener('resize', onWindowResize);
 window.addEventListener('load', () => {
-  initWindowResizeHandlers();
   initOnLoadPreviewThumbnailHandler();
   initOnChangeSelectFileHandler();
   initOnChangeSampleImageHandler();
