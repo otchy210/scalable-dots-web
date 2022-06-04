@@ -80,18 +80,15 @@ $form-range-track-bg: rgba(var(--bs-white-rgb), 0.7);
     border: solid 2px $primary;
   }
   .drop-here {
-    border: dotted 2px $primary;
+    border: dotted 3px $primary;
     border-radius: 8px;
     cursor: pointer;
-    img {
-      width: 32px;
-      pointer-events: none;
+    &.dragging {
+      background-color: rgba(var(--bs-white-rgb), 0.6);
     }
-    @include media-breakpoint-up(md) {
-      border-width: 3px;
-      img {
-        width: 48px;
-      }
+    img {
+      width: 48px;
+      pointer-events: none;
     }
     @include media-breakpoint-up(xxl) {
       border-width: 4px;
@@ -99,11 +96,7 @@ $form-range-track-bg: rgba(var(--bs-white-rgb), 0.7);
         width: 64px;
       }
     }
-  }
-  .select-file {
-    text-decoration: underline;
-    cursor: pointer;
-    input {
+    .file-input {
       display: none;
     }
   }

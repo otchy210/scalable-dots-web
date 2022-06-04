@@ -23,9 +23,14 @@ export const getJumbotron = () => {
   return (jumbotron = queryIfNoElementGiven(jumbotron, '.jumbotron'));
 };
 
+let dropHere: HTMLDivElement;
+export const getDropHere = () => {
+  return (dropHere = queryIfNoElementGiven(dropHere, '.drop-here'));
+};
+
 let fileInput: HTMLInputElement;
 export const getFileInput = () => {
-  return (fileInput = queryIfNoElementGiven(fileInput, '.select-file input'));
+  return (fileInput = queryIfNoElementGiven(fileInput, '.file-input'));
 };
 
 let sampleImage: HTMLSelectElement;

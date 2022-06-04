@@ -9,6 +9,7 @@ import { ClickEventListener } from './types';
 import { handleOnClickDropHere } from './listeners/handleOnClickDropHere';
 import { initOnLoadPreviewThumbnailHandler } from './listeners/handleOnLoadPreviewThumbnail';
 import { initOnChangeSampleImageHandler } from './listeners/handleOnChangeSampleImage';
+import { initDragAndDrop } from './listeners/handleDragAndDrop';
 // import 'bootstrap';
 // TODO: optimize import https://getbootstrap.jp/docs/5.0/customize/optimize/
 
@@ -42,6 +43,7 @@ window.addEventListener('resize', onWindowResize);
 window.addEventListener('load', () => {
   initOnLoadPreviewThumbnailHandler();
   initOnChangeSelectFileHandler();
+  initDragAndDrop();
   initOnChangeSampleImageHandler();
   initOnInputSvgOptionsHandlers();
 });

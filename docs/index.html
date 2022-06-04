@@ -27,16 +27,15 @@
           <div class="col-12 col-sm-8 col-md-6 mb-3 mb-sm-0">
             <div class="dialog p-3">
               <div class="d-flex">
-                <div class="drop-here mx-auto mb-3 p-3">
-                  <img src="/images/drop-here.svg" />
-                </div>
-              </div>
-              <div>
-                画像ファイルをドロップもしくは<label class="select-file"
-                  >選択<input
+                <div class="drop-here mx-auto mb-3 p-4 text-center">
+                  <img src="/images/drop-here.svg" class="mb-3" /><br />
+                  画像ファイルをドロップ<br />もしくはクリックして選択
+                  <input
+                    class="file-input"
                     type="file"
-                    accept="image/gif,image/jpeg,image/png,image/webp" /></label
-                >もしくは…
+                    accept="image/gif,image/jpeg,image/png,image/webp"
+                  />
+                </div>
               </div>
               <div>とりあえずサンプル画像で試す？</div>
               <select class="form-select sample-image">
@@ -201,7 +200,9 @@
                 </div>
               </div>
               <div class="col-12 d-grid mt-3">
-                <button class="btn btn-primary" type="button">保存</button>
+                <button class="btn btn-primary" type="button">
+                  SVG を保存
+                </button>
               </div>
             </div>
           </div>

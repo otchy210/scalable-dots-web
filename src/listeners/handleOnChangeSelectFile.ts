@@ -1,8 +1,5 @@
-import {
-  getFileInput,
-  getFileName,
-  getPreviewThumbnail,
-} from '../common/elements';
+import { getFileInput } from '../common/elements';
+import { loadFile } from '../common/loadFile';
 
 export const initOnChangeSelectFileHandler = () => {
   const fileInput = getFileInput();
@@ -11,14 +8,6 @@ export const initOnChangeSelectFileHandler = () => {
       return;
     }
     const file = fileInput.files[0];
-    const reader = new FileReader();
-    reader.addEventListener('load', () => {
-      const fileName = getFileName();
-      fileName.innerHTML = file.name;
-      const dataURL = reader.result as string;
-      const previewThumbnail = getPreviewThumbnail();
-      previewThumbnail.setAttribute('src', dataURL);
-    });
-    reader.readAsDataURL(file);
+    loadFile(file);
   });
 };
