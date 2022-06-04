@@ -1,14 +1,10 @@
-import { getPreview, getSvgHolder } from '../common/elements';
-import { setPreviewHeight } from '../common/setPreviewHeight';
+import { getPreview } from '../common/elements';
+import { adjustPreviewHeight } from '../common/adjustPreviewHeight';
+import { adjustSvgHolderHeight } from '../common/adjustSvgHolderHeight';
 
 export const onWindowResize = () => {
-  const svgHolder = getSvgHolder();
-  const rect = svgHolder.getBoundingClientRect();
-  svgHolder.style.height = `${rect.width}px`;
-
-  const preview = getPreview();
-  const previewRect = preview.getBoundingClientRect();
-  if (previewRect.height > 0) {
-    setPreviewHeight();
+  adjustSvgHolderHeight();
+  if (getPreview().style.height) {
+    adjustPreviewHeight();
   }
 };
