@@ -10,20 +10,16 @@ import { handleOnClickDropHere } from './listeners/handleOnClickDropHere';
 import { initOnLoadPreviewThumbnailHandler } from './listeners/handleOnLoadPreviewThumbnail';
 import { initOnChangeSampleImageHandler } from './listeners/handleOnChangeSampleImage';
 import { initDragAndDrop } from './listeners/handleDragAndDrop';
+import { handleOnClickSaveSvg } from './listeners/handleOnClickSaveSvg';
 // import 'bootstrap';
 // TODO: optimize import https://getbootstrap.jp/docs/5.0/customize/optimize/
-
-console.log('index.ts');
-
-export const hello = (name: string) => {
-  return `hello ${name}`;
-};
 
 const clickEventListeners: ClickEventListener[] = [
   handleOnClickJumbotronBg,
   handleOnClickPreviewBg,
   handleOnClickDotType,
   handleOnClickDropHere,
+  handleOnClickSaveSvg,
 ];
 document.addEventListener('click', (e: MouseEvent) => {
   const target = e.target as HTMLElement;

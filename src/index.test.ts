@@ -1,7 +1,5 @@
-import { hello } from './index';
-
-describe('hello', () => {
+describe('index', () => {
   it('works', () => {
-    expect(hello('otchy')).toBe('hello otchy');
+    expect(true).toBe(true);
   });
 });
