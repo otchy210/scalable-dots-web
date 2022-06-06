@@ -90,7 +90,10 @@
                   <div class="file-name mx-auto">filename.png</div>
                 </div>
                 <div class="col-12">
-                  <label class="h5 mt-3">タイプ</label>
+                  <div class="h5 mt-3 preview-header">SVG 設定</div>
+                </div>
+                <div class="col-12">
+                  <label class="h6 mb-1">タイプ</label>
                   <div class="btn-group" role="group">
                     <input
                       type="radio"
@@ -129,7 +132,7 @@
                   </div>
                 </div>
                 <div class="col-6 col-sm-12">
-                  <label for="size" class="form-label h5 mt-3"
+                  <label for="size" class="form-label h6 mt-3 mb-0"
                     >サイズ<small
                       >[<span id="size-value">16</span>]</small
                     ></label
@@ -144,7 +147,7 @@
                   />
                 </div>
                 <div class="col-6 col-sm-12">
-                  <label for="gap" class="form-label h5 mt-3"
+                  <label for="gap" class="form-label h6 mt-3 mb-0"
                     >すき間<small>[<span id="gap-value">1</span>]</small></label
                   >
                   <input
@@ -156,58 +159,82 @@
                     value="1"
                   />
                 </div>
-              </div>
-              <div class="col-12">
-                <hr />
-              </div>
-              <div class="col-12">
-                <label class="h5 mt-3">プレビュー背景</label>
-                <div class="btn-group" role="group">
-                  <input
-                    type="radio"
-                    class="btn-check"
-                    name="preview-bg"
-                    value="black"
-                    id="preview-bg-black"
-                    autocomplete="off"
-                  />
-                  <label class="btn btn-outline-primary" for="preview-bg-black"
-                    >黒</label
-                  >
-                  <input
-                    type="radio"
-                    class="btn-check"
-                    name="preview-bg"
-                    value="gray"
-                    id="preview-bg-gray"
-                    autocomplete="off"
-                    checked
-                  />
-                  <label class="btn btn-outline-primary" for="preview-bg-gray"
-                    >灰</label
-                  >
-                  <input
-                    type="radio"
-                    class="btn-check"
-                    name="preview-bg"
-                    value="white"
-                    id="preview-bg-white"
-                    autocomplete="off"
-                  />
-                  <label class="btn btn-outline-primary" for="preview-bg-white"
-                    >白</label
-                  >
+                <div class="col-12">
+                  <div class="h5 mt-3 preview-header">プレビュー</div>
                 </div>
-              </div>
-              <div class="col-12 d-grid mt-3">
-                <button class="save-svg btn btn-primary" type="button">
-                  SVG を保存
-                </button>
+                <div class="col-6 col-sm-12">
+                  <label class="h6 mb-1">背景色</label>
+                  <div class="btn-group" role="group">
+                    <input
+                      type="radio"
+                      class="btn-check"
+                      name="preview-bg"
+                      value="black"
+                      id="preview-bg-black"
+                      autocomplete="off"
+                    />
+                    <label
+                      class="btn btn-outline-primary"
+                      for="preview-bg-black"
+                      >黒</label
+                    >
+                    <input
+                      type="radio"
+                      class="btn-check"
+                      name="preview-bg"
+                      value="gray"
+                      id="preview-bg-gray"
+                      autocomplete="off"
+                      checked
+                    />
+                    <label class="btn btn-outline-primary" for="preview-bg-gray"
+                      >灰</label
+                    >
+                    <input
+                      type="radio"
+                      class="btn-check"
+                      name="preview-bg"
+                      value="white"
+                      id="preview-bg-white"
+                      autocomplete="off"
+                    />
+                    <label
+                      class="btn btn-outline-primary"
+                      for="preview-bg-white"
+                      >白</label
+                    >
+                  </div>
+                </div>
+                <div class="col-6 col-sm-12">
+                  <label for="zoom" class="form-label h6 mt-3 mb-0"
+                    >サイズ<small
+                      >[<span id="zoom-value">100%</span>]</small
+                    ></label
+                  >
+                  <input
+                    type="range"
+                    class="form-range"
+                    min="10"
+                    step="10"
+                    max="200"
+                    id="zoom"
+                    value="100"
+                  />
+                </div>
+                <div class="col-12 d-grid mt-3">
+                  <button class="save-svg btn btn-primary" type="button">
+                    SVG を保存
+                  </button>
+                </div>
               </div>
             </div>
           </div>
           <div class="col-12 col-sm-8 col-md-7 col-xl-6 mt-3 mt-sm-0">
-            <div class="svg-holder bg-gray"></div>
+            <div>
+              <div class="svg-box bg-gray">
+                <div class="svg-holder"></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

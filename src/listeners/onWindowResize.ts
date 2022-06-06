@@ -1,9 +1,9 @@
 import { getPreview } from '../common/elements';
 import { adjustPreviewHeight } from '../common/adjustPreviewHeight';
-import { adjustSvgHolderHeight } from '../common/adjustSvgHolderHeight';
+import { adjustSvgBoxHeight } from '../common/adjustSvgBoxHeight';
 
 export const onWindowResize = () => {
-  adjustSvgHolderHeight();
+  adjustSvgBoxHeight();
   if (getPreview().style.height) {
     adjustPreviewHeight();
   }

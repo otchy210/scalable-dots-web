@@ -106,10 +106,27 @@ $form-range-track-bg: rgba(var(--bs-white-rgb), 0.7);
   overflow: hidden;
   background-color: $light;
   transition: height 0.2s;
-  label.h5 {
+  .preview-header {
+    display: flex;
+    align-items: center;
+    &::before,
+    &::after {
+      content: '';
+      flex-grow: 1;
+      height: 1px;
+      background-color: $primary;
+    }
+    &::before {
+      margin-right: 8px;
+    }
+    &::after {
+      margin-left: 8px;
+    }
+  }
+  label.h6 {
     display: block;
   }
-  .svg-holder {
+  .svg-box {
     width: 100%;
     overflow: auto;
   }

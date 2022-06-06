@@ -56,6 +56,11 @@ export const getFileName = () => {
   return (fileName = queryIfNoElementGiven(fileName, '.file-name'));
 };
 
+let svgBox: HTMLDivElement;
+export const getSvgBox = () => {
+  return (svgBox = queryIfNoElementGiven(svgBox, '.svg-box'));
+};
+
 let svgHolder: HTMLDivElement;
 export const getSvgHolder = () => {
   return (svgHolder = queryIfNoElementGiven(svgHolder, '.svg-holder'));
@@ -93,4 +98,16 @@ export const getGap = () => {
 let gapValue: HTMLSpanElement;
 export const getGapValue = () => {
   return (gapValue = queryIfNoElementGiven(gapValue, '#gap-value'));
+};
+
+let zoomRange: HTMLInputElement;
+export const getZoomRange = () => {
+  return (zoomRange = queryIfNoElementGiven(zoomRange, '#zoom'));
+};
+export const getZoom = () => {
+  return `${getZoomRange().value}%`;
+};
+let zoomValue: HTMLSpanElement;
+export const getZoomValue = () => {
+  return (zoomValue = queryIfNoElementGiven(zoomValue, '#zoom-value'));
 };

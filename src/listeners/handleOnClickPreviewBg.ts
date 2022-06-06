@@ -1,4 +1,4 @@
-import { getPreviewThumbnail, getSvgHolder } from '../common/elements';
+import { getPreviewThumbnail, getSvgBox } from '../common/elements';
 import { ClickEventListener } from '../types';
 
 export const handleOnClickPreviewBg: ClickEventListener = {
@@ -7,8 +7,8 @@ export const handleOnClickPreviewBg: ClickEventListener = {
   },
   handle: (target) => {
     const thumbnail = getPreviewThumbnail();
-    const svgHolder = getSvgHolder();
-    [thumbnail, svgHolder].forEach((el) => {
+    const svgBox = getSvgBox();
+    [thumbnail, svgBox].forEach((el) => {
       el.classList.remove('bg-black', 'bg-gray', 'bg-white');
       el.classList.add(`bg-${target.getAttribute('value')}`);
     });
