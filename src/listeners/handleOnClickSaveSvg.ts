@@ -22,7 +22,7 @@ export const handleOnClickSaveSvg: ClickEventListener = {
     const svgHolder = getSvgHolder();
     const svg = svgHolder.innerHTML;
     const base64Svg = btoa(svg);
-    const dataUrl = `data:image/png;base64,${base64Svg}`;
+    const dataUrl = `data:image/svg;base64,${base64Svg}`;
 
     const a = document.createElement('a');
     a.setAttribute('download', fileName);
