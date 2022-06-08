@@ -9,6 +9,8 @@
 $primary: #514421;
 $light: #e8d8c7;
 $body-color: $primary;
+$dark: #2b2512;
+$darker: #231f10;
 
 // Required
 @import '../node_modules/bootstrap/scss/variables';
@@ -159,6 +161,39 @@ $form-range-track-bg: rgba(var(--bs-white-rgb), 0.7);
     }
     &.icon-shop {
       background-image: url('/images/icon-shop.svg');
+    }
+  }
+}
+
+.footer {
+  background-color: $dark;
+  color: $light;
+  font-size: 0.8rem;
+
+  dt {
+    font-weight: normal;
+    color: $white;
+  }
+  dd {
+    margin-bottom: 0;
+  }
+  a {
+    color: $light;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+.bottom-bar {
+  background: linear-gradient($darker, $dark);
+  color: $light;
+  font-size: 0.8rem;
+  a {
+    color: $white;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
     }
   }
 }
