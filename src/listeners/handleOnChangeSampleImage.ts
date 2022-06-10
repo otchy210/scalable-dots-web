@@ -1,3 +1,4 @@
+import { closePreview } from '../common/closePreview';
 import {
   getFileName,
   getPreviewThumbnail,
@@ -9,6 +10,7 @@ export const initOnChangeSampleImageHandler = () => {
   sampleImage.addEventListener('change', () => {
     const name = sampleImage.value;
     if (!name) {
+      closePreview();
       return;
     }
     const fileName = getFileName();

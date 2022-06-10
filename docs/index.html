@@ -140,7 +140,7 @@
                   <input
                     type="range"
                     class="form-range"
-                    min="0"
+                    min="1"
                     max="32"
                     id="size"
                     value="16"
@@ -207,16 +207,16 @@
                 </div>
                 <div class="col-6 col-sm-12">
                   <label for="zoom" class="form-label h6 mt-3 mb-0"
-                    >サイズ<small
+                    >ズーム<small
                       >[<span id="zoom-value">100%</span>]</small
                     ></label
                   >
                   <input
                     type="range"
                     class="form-range"
-                    min="10"
-                    step="10"
-                    max="200"
+                    min="20"
+                    step="20"
+                    max="300"
                     id="zoom"
                     value="100"
                   />
@@ -434,7 +434,7 @@
             ></button>
           </div>
           <div class="modal-body">
-            ScalableDots がサポートしている画像ファイルは、PNG、Jpeg、GIF、WebP
+            ScalableDots がサポートしている画像ファイルは、PNG、JPEG、GIF、WebP
             のみです。
           </div>
           <div class="modal-footer">
@@ -444,6 +444,78 @@
               data-bs-dismiss="modal"
             >
               閉じる
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="file-size-info" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">比較的大きな画像ファイルです</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            ScalableDots
+            は全てブラウザ上で動作するため、処理を行う画像ファイルの大きさに制限はありません。どのくらいのサイズになると処理が重くなるか、最悪のケースでブラウザが固まってしまうかは、あなたが使っているパソコンあるいはスマホの処理能力に依存します。<br />
+            比較的大きな画像の処理を開始する際はこのような警告が念のため表示されますが、あなたの判断で処理を開始するのはもちろん構いません。<br />
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              止めておく
+            </button>
+            <button
+              type="button"
+              id="file-size-info-proceed"
+              class="btn btn-primary"
+            >
+              処理を開始する
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="file-size-warn" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title text-danger">
+              かなり大きな画像ファイルです
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            ScalableDots
+            は全てブラウザ上で動作するため、処理を行う画像ファイルの大きさに制限はありません。どのくらいのサイズになると処理が重くなるか、最悪のケースでブラウザが固まってしまうかは、あなたが使っているパソコンあるいはスマホの処理能力に依存します。<br />
+            あなたの判断で処理を開始する事は出来ますが、選択された画像はかなりサイズが大きいのでこのまま処理を進めることはお勧めしません。ブラウザ版よりも負荷の少ないコマンドライン版の利用をご検討下さい。<br />
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              止めておく
+            </button>
+            <button
+              type="button"
+              id="file-size-warn-proceed"
+              class="btn btn-primary"
+            >
+              構わず処理を開始する
             </button>
           </div>
         </div>

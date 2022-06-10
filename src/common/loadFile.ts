@@ -1,5 +1,8 @@
-import { getFileName, getFileTypeError, getPreviewThumbnail } from './elements';
-import Modal from 'bootstrap/js/dist/modal';
+import {
+  getFileName,
+  getFileTypeErrorModal,
+  getPreviewThumbnail,
+} from './elements';
 
 const validFileTypes = new Set([
   'image/png',
@@ -10,7 +13,7 @@ const validFileTypes = new Set([
 
 export const loadFile = (file: File) => {
   if (!validFileTypes.has(file.type)) {
-    const fileTypeErrorModal = new Modal(getFileTypeError());
+    const fileTypeErrorModal = getFileTypeErrorModal();
     fileTypeErrorModal.show();
     console.error(`No support for the file type: ${file.type}`);
     return;

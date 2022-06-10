@@ -1,4 +1,5 @@
 import { DotType } from '@otchy/scalable-dots-core/dist/esm/types';
+import { Modal } from 'bootstrap';
 
 const queryIfNoElementGiven = <T>(element: T, query: string): T => {
   if (element) {
@@ -113,9 +114,41 @@ export const getZoomValue = () => {
 };
 
 let fileTypeError: HTMLDivElement;
-export const getFileTypeError = () => {
-  return (fileTypeError = queryIfNoElementGiven(
-    fileTypeError,
-    '#file-type-error'
+let fileSizeErrorModal: Modal;
+export const getFileTypeErrorModal = () => {
+  if (fileSizeErrorModal) {
+    return fileSizeErrorModal;
+  }
+  return (fileSizeErrorModal = new Modal(
+    queryIfNoElementGiven(fileTypeError, '#file-type-error')
   ));
+};
+
+let fileSizeInfo: HTMLDivElement;
+export const getFileSizeInfo = () => {
+  return (fileSizeInfo = queryIfNoElementGiven(
+    fileSizeInfo,
+    '#file-size-info'
+  ));
+};
+let fileSizeInfoModal: Modal;
+export const getFileSizeInfoModal = () => {
+  if (fileSizeInfoModal) {
+    return fileSizeInfoModal;
+  }
+  return (fileSizeInfoModal = new Modal(getFileSizeInfo()));
+};
+let fileSizeWarn: HTMLDivElement;
+export const getFileSizeWarn = () => {
+  return (fileSizeWarn = queryIfNoElementGiven(
+    fileSizeWarn,
+    '#file-size-warn'
+  ));
+};
+let fileSizeWarnModal: Modal;
+export const getFileSizeWarnModal = () => {
+  if (fileSizeWarnModal) {
+    return fileSizeWarnModal;
+  }
+  return (fileSizeWarnModal = new Modal(getFileSizeWarn()));
 };

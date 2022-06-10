@@ -3,9 +3,9 @@ import { ScalableDotsProps } from '@otchy/scalable-dots-core/dist/esm/types';
 import { getGap, getSize, getSvgHolder, getType } from './elements';
 import { getImageData } from './imageData';
 
-export const updateSvg = () => {
+export const updateSvg = async () => {
   const sdProps: ScalableDotsProps = {
-    imageData: getImageData(),
+    imageData: await getImageData(),
     type: getType(),
     size: getSize(),
     gap: getGap(),

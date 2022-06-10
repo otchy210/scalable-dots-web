@@ -4,13 +4,15 @@ import { handleOnClickDotType } from './listeners/handleOnClickDotType';
 import { handleOnClickJumbotronBg } from './listeners/handleOnClickJumbotronBg';
 import { handleOnClickPreviewBg } from './listeners/handleOnClickPreviewBg';
 import { onWindowResize } from './listeners/onWindowResize';
-import './style.scss';
 import { ClickEventListener } from './types';
 import { handleOnClickDropHere } from './listeners/handleOnClickDropHere';
 import { initOnLoadPreviewThumbnailHandler } from './listeners/handleOnLoadPreviewThumbnail';
 import { initOnChangeSampleImageHandler } from './listeners/handleOnChangeSampleImage';
 import { initDragAndDrop } from './listeners/handleDragAndDrop';
 import { handleOnClickSaveSvg } from './listeners/handleOnClickSaveSvg';
+import { handleOnClickFileSizeInfoProceed } from './listeners/handleOnClickFileSizeInfoProceed';
+import { handleOnClickFileSizeWarnProceed } from './listeners/handleOnClickFileSizeWarnProceed';
+import './style.scss';
 import 'bootstrap'; // for all js
 // TODO: optimize import https://getbootstrap.jp/docs/5.0/customize/optimize/
 
@@ -19,6 +21,8 @@ const clickEventListeners: ClickEventListener[] = [
   handleOnClickPreviewBg,
   handleOnClickDotType,
   handleOnClickDropHere,
+  handleOnClickFileSizeInfoProceed,
+  handleOnClickFileSizeWarnProceed,
   handleOnClickSaveSvg,
 ];
 document.addEventListener('click', (e: MouseEvent) => {
