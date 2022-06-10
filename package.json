@@ -1,6 +1,6 @@
 {
   "name": "@otchy/scalable-dots-web",
-  "version": "0.0.32",
+  "version": "0.0.33",
   "description": "",
   "scripts": {
     "build": "webpack",
@@ -24,6 +24,7 @@
   "homepage": "https://github.com/otchy210/scalable-dots-web#readme",
   "devDependencies": {
     "@jest/types": "^28.1.0",
+    "@types/bootstrap": "^5.1.12",
     "@types/jest": "^27.5.1",
     "@typescript-eslint/eslint-plugin": "^5.25.0",
     "@typescript-eslint/parser": "^5.25.0",

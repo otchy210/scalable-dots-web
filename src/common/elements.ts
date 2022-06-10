@@ -111,3 +111,11 @@ let zoomValue: HTMLSpanElement;
 export const getZoomValue = () => {
   return (zoomValue = queryIfNoElementGiven(zoomValue, '#zoom-value'));
 };
+
+let fileTypeError: HTMLDivElement;
+export const getFileTypeError = () => {
+  return (fileTypeError = queryIfNoElementGiven(
+    fileTypeError,
+    '#file-type-error'
+  ));
+};

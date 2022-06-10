@@ -11,7 +11,7 @@ import { initOnLoadPreviewThumbnailHandler } from './listeners/handleOnLoadPrevi
 import { initOnChangeSampleImageHandler } from './listeners/handleOnChangeSampleImage';
 import { initDragAndDrop } from './listeners/handleDragAndDrop';
 import { handleOnClickSaveSvg } from './listeners/handleOnClickSaveSvg';
-// import 'bootstrap';
+import 'bootstrap'; // for all js
 // TODO: optimize import https://getbootstrap.jp/docs/5.0/customize/optimize/
 
 const clickEventListeners: ClickEventListener[] = [
