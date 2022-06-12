@@ -135,14 +135,14 @@ $form-range-track-bg: rgba(var(--bs-white-rgb), 0.7);
 }
 .information {
   background: linear-gradient($light, $white);
-  h1 {
+  h2 {
     text-align: center;
     small {
       display: block;
       font-size: 0.5em;
     }
   }
-  h2.icon {
+  h3.icon {
     background-size: 1.2em;
     background-repeat: no-repeat;
     padding-left: 1.4em;
@@ -161,6 +161,54 @@ $form-range-track-bg: rgba(var(--bs-white-rgb), 0.7);
     }
     &.icon-shop {
       background-image: url('/images/icon-shop.svg');
+    }
+  }
+  dl {
+    dt {
+      font-weight: 500;
+    }
+    dd {
+      margin-top: 0.25rem;
+      code {
+        background-color: rgba(var(--bs-black-rgb), 0.6);
+        border-radius: 2px;
+        color: $white;
+        padding: 0.2rem;
+        line-height: 1.5rem;
+      }
+    }
+  }
+  thead {
+    tr {
+      background-color: $primary;
+      color: $light;
+      th {
+        font-weight: 500;
+        white-space: nowrap;
+      }
+    }
+  }
+  tbody {
+    tr {
+      border-style: solid;
+      border-width: 1px 0;
+      border-color: $primary;
+    }
+  }
+  th,
+  td {
+    padding: 0;
+  }
+  @include media-breakpoint-up(sm) {
+    th,
+    td {
+      padding: 0 0.5rem;
+    }
+  }
+  @include media-breakpoint-up(md) {
+    th,
+    td {
+      padding: 0 1rem;
     }
   }
 }

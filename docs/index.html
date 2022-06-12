@@ -20,7 +20,9 @@
           <div class="col-12 col-md-3">
             <div class="d-flex justify-content-center pb-3">
               <div class="logo-wrapper">
-                <img src="/images/logo.svg" alt="Scalable Dots" />
+                <h1 class="m-0">
+                  <img src="/images/logo.svg" alt="ScalableDots" />
+                </h1>
               </div>
             </div>
           </div>
@@ -83,149 +85,141 @@
           <div
             class="col-12 col-sm-4 col-md-3 col-xl-2 offset-md-1 offset-xl-2"
           >
-            <div class="container px-0">
-              <div class="row">
-                <div class="col-12 d-flex flex-column">
-                  <img src="" class="img-thumbnail mx-auto bg-gray" />
-                  <div class="file-name mx-auto">filename.png</div>
-                </div>
-                <div class="col-12">
-                  <div class="h5 mt-3 preview-header">SVG 設定</div>
-                </div>
-                <div class="col-12">
-                  <label class="h6 mb-1">タイプ</label>
-                  <div class="btn-group" role="group">
-                    <input
-                      type="radio"
-                      class="btn-check"
-                      name="type"
-                      value="square"
-                      id="type-square"
-                      autocomplete="off"
-                      checked
-                    />
-                    <label class="btn btn-outline-primary" for="type-square"
-                      >■</label
-                    >
-                    <input
-                      type="radio"
-                      class="btn-check"
-                      name="type"
-                      value="circle"
-                      id="type-circle"
-                      autocomplete="off"
-                    />
-                    <label class="btn btn-outline-primary" for="type-circle"
-                      >●</label
-                    >
-                    <input
-                      type="radio"
-                      class="btn-check"
-                      name="type"
-                      value="rhombus"
-                      id="type-rhombus"
-                      autocomplete="off"
-                    />
-                    <label class="btn btn-outline-primary" for="type-rhombus"
-                      >◆</label
-                    >
-                  </div>
-                </div>
-                <div class="col-6 col-sm-12">
-                  <label for="size" class="form-label h6 mt-3 mb-0"
-                    >サイズ<small
-                      >[<span id="size-value">16</span>]</small
-                    ></label
+            <div class="row">
+              <div class="col-12 d-flex flex-column">
+                <img src="" class="img-thumbnail mx-auto bg-gray" />
+                <div class="file-name mx-auto"></div>
+              </div>
+              <div class="col-12">
+                <div class="h5 mt-3 preview-header">SVG 設定</div>
+              </div>
+              <div class="col-12">
+                <label class="h6 mb-1">タイプ</label>
+                <div class="btn-group" role="group">
+                  <input
+                    type="radio"
+                    class="btn-check"
+                    name="type"
+                    value="square"
+                    id="type-square"
+                    autocomplete="off"
+                    checked
+                  />
+                  <label class="btn btn-outline-primary" for="type-square"
+                    >■</label
                   >
                   <input
-                    type="range"
-                    class="form-range"
-                    min="1"
-                    max="32"
-                    id="size"
-                    value="16"
+                    type="radio"
+                    class="btn-check"
+                    name="type"
+                    value="circle"
+                    id="type-circle"
+                    autocomplete="off"
                   />
-                </div>
-                <div class="col-6 col-sm-12">
-                  <label for="gap" class="form-label h6 mt-3 mb-0"
-                    >すき間<small>[<span id="gap-value">1</span>]</small></label
+                  <label class="btn btn-outline-primary" for="type-circle"
+                    >●</label
                   >
                   <input
-                    type="range"
-                    class="form-range"
-                    min="0"
-                    max="32"
-                    id="gap"
-                    value="1"
+                    type="radio"
+                    class="btn-check"
+                    name="type"
+                    value="rhombus"
+                    id="type-rhombus"
+                    autocomplete="off"
                   />
+                  <label class="btn btn-outline-primary" for="type-rhombus"
+                    >◆</label
+                  >
                 </div>
-                <div class="col-12">
-                  <div class="h5 mt-3 preview-header">プレビュー</div>
-                </div>
-                <div class="col-6 col-sm-12">
-                  <label class="h6 mb-1">背景色</label>
-                  <div class="btn-group" role="group">
-                    <input
-                      type="radio"
-                      class="btn-check"
-                      name="preview-bg"
-                      value="black"
-                      id="preview-bg-black"
-                      autocomplete="off"
-                    />
-                    <label
-                      class="btn btn-outline-primary"
-                      for="preview-bg-black"
-                      >黒</label
-                    >
-                    <input
-                      type="radio"
-                      class="btn-check"
-                      name="preview-bg"
-                      value="gray"
-                      id="preview-bg-gray"
-                      autocomplete="off"
-                      checked
-                    />
-                    <label class="btn btn-outline-primary" for="preview-bg-gray"
-                      >灰</label
-                    >
-                    <input
-                      type="radio"
-                      class="btn-check"
-                      name="preview-bg"
-                      value="white"
-                      id="preview-bg-white"
-                      autocomplete="off"
-                    />
-                    <label
-                      class="btn btn-outline-primary"
-                      for="preview-bg-white"
-                      >白</label
-                    >
-                  </div>
-                </div>
-                <div class="col-6 col-sm-12">
-                  <label for="zoom" class="form-label h6 mt-3 mb-0"
-                    >ズーム<small
-                      >[<span id="zoom-value">100%</span>]</small
-                    ></label
+              </div>
+              <div class="col-6 col-sm-12">
+                <label for="size" class="form-label h6 mt-3 mb-0"
+                  >サイズ<small>[<span id="size-value">16</span>]</small></label
+                >
+                <input
+                  type="range"
+                  class="form-range"
+                  min="1"
+                  max="32"
+                  id="size"
+                  value="16"
+                />
+              </div>
+              <div class="col-6 col-sm-12">
+                <label for="gap" class="form-label h6 mt-3 mb-0"
+                  >すき間<small>[<span id="gap-value">1</span>]</small></label
+                >
+                <input
+                  type="range"
+                  class="form-range"
+                  min="0"
+                  max="32"
+                  id="gap"
+                  value="1"
+                />
+              </div>
+              <div class="col-12">
+                <div class="h5 mt-3 preview-header">プレビュー</div>
+              </div>
+              <div class="col-6 col-sm-12">
+                <label class="h6 mb-1">背景色</label>
+                <div class="btn-group" role="group">
+                  <input
+                    type="radio"
+                    class="btn-check"
+                    name="preview-bg"
+                    value="black"
+                    id="preview-bg-black"
+                    autocomplete="off"
+                  />
+                  <label class="btn btn-outline-primary" for="preview-bg-black"
+                    >黒</label
                   >
                   <input
-                    type="range"
-                    class="form-range"
-                    min="20"
-                    step="20"
-                    max="300"
-                    id="zoom"
-                    value="100"
+                    type="radio"
+                    class="btn-check"
+                    name="preview-bg"
+                    value="gray"
+                    id="preview-bg-gray"
+                    autocomplete="off"
+                    checked
                   />
+                  <label class="btn btn-outline-primary" for="preview-bg-gray"
+                    >灰</label
+                  >
+                  <input
+                    type="radio"
+                    class="btn-check"
+                    name="preview-bg"
+                    value="white"
+                    id="preview-bg-white"
+                    autocomplete="off"
+                  />
+                  <label class="btn btn-outline-primary" for="preview-bg-white"
+                    >白</label
+                  >
                 </div>
-                <div class="col-12 d-grid mt-3">
-                  <button class="save-svg btn btn-primary" type="button">
-                    SVG を保存
-                  </button>
-                </div>
+              </div>
+              <div class="col-6 col-sm-12">
+                <label for="zoom" class="form-label h6 mt-3 mb-0"
+                  >ズーム<small
+                    >[<span id="zoom-value">100%</span>]</small
+                  ></label
+                >
+                <input
+                  type="range"
+                  class="form-range"
+                  min="20"
+                  step="20"
+                  max="300"
+                  id="zoom"
+                  value="100"
+                />
+              </div>
+              <div class="col-12 d-grid mt-3">
+                <button class="save-svg btn btn-primary" type="button">
+                  SVG を保存
+                </button>
               </div>
             </div>
           </div>
@@ -243,30 +237,126 @@
       <div class="container">
         <div class="row">
           <div class="col">
-            <h1 class="h2">
+            <h2>
               ドット絵は SVG 画像にすれば綺麗に拡大出来る！<small
                 >ドット絵なのにベクター画像？そう、二アレストネイバー法なんてもう知らなくてもいい！</small
               >
-            </h1>
+            </h2>
           </div>
         </div>
         <div class="row">
           <div class="col-12 col-md-6 col-xl-4">
-            <h2 class="h3 icon icon-box">ScalableDots とは</h2>
+            <h3 class="icon icon-box">ScalableDots とは</h3>
           </div>
           <div class="col-12 col-md-6 col-xl-4">
-            <h2 class="h3 icon icon-shop">なぜ SVG が良いのか</h2>
+            <h3 class="icon icon-shop">なぜ SVG？</h3>
           </div>
           <div class="col-12 col-md-6 col-xl-4">
-            <h2 class="h3 icon icon-pot">ブラウザ完結型ツール</h2>
+            <h3 class="icon icon-pot">ブラウザ完結型</h3>
           </div>
-          <div class="col-12 col-md-6 col-xl-4">
-            <h2 class="h3 icon icon-shelf">コマンドラインツール</h2>
+          <div class="col-12 col-xl-10 offset-xl-1 col-xxl-8 offset-xxl-2">
+            <h3 class="icon icon-shelf">コマンドライン版</h3>
+            <p>
+              いま開いているこのページは ScalableDots
+              ウェブ版ですが、ブラウザで処理をするには重たいサイズの大きな画像や、大量のファイルをまとめて変換したい人のためにコマンドライン版も用意されています。必要に応じてコマンドライン版の利用も検討して下さい。<br />
+            </p>
+            <h4>システム要件</h4>
+            <p>
+              Node.js バージョン 18 以降が必要です。事前に<a
+                href="https://www.google.com/search?q=Node.js+%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB"
+                target="_blank"
+                >インストール</a
+              >して下さい。
+            </p>
+            <h4>インストール方法</h4>
+            <p>
+              ScalableDots コマンドライン版のインストールには Node.js
+              に同梱されているコマンドの <code>npm</code> を使います。<br />
+            </p>
+            <dl class="ps-3">
+              <dt>特定のフォルダにインストールする場合</dt>
+              <dd><code>$ npm install @otchy/scalable-dots-cli</code></dd>
+              <dt>システム全体にインストールする場合</dt>
+              <dd><code>$ npm install -g @otchy/scalable-dots-cli</code></dd>
+            </dl>
+            <h4>実行方法</h4>
+            <p>
+              <code>scalable-dots</code> コマンドは引数に画像ファイルを渡すと
+              SVG
+              に変換した結果を標準出力に書き出すので、それを別のファイルにリダイレクトして保存してください。
+            </p>
+            <dl class="ps-3">
+              <dt>特定のフォルダにインストールした場合</dt>
+              <dd><code>$ npx scalable-dots input.png > output.svg</code></dd>
+              <dt>システム全体にインストールした場合</dt>
+              <dd><code>$ scalable-dots input.png > output.svg</code></dd>
+            </dl>
+            <h4>コマンドラインオプション</h4>
+            <p>
+              <code>scalable-dots</code>
+              コマンドには以下のオプションを指定する事が出来ます。
+            </p>
+            <table>
+              <thead>
+                <tr>
+                  <th>オプション</th>
+                  <th>説明</th>
+                  <th>備考</th>
+                  <th>デフォルト</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>--type</code></td>
+                  <td>ドットの種類</td>
+                  <td>
+                    <code>SQUARE</code>, <code>CIRCLE</code>,
+                    <code>RHOMBUS</code> のいずれか
+                  </td>
+                  <td><code>SQUARE</code></td>
+                </tr>
+                <tr>
+                  <td><code>--size</code></td>
+                  <td>ドットのサイズ</td>
+                  <td>整数値で指定</td>
+                  <td><code>16</code></td>
+                </tr>
+                <tr>
+                  <td><code>--gap</code></td>
+                  <td>ドット同士のすき間</td>
+                  <td>整数値で指定</td>
+                  <td><code>1</code></td>
+                </tr>
+                <tr>
+                  <td><code>--pretty-print</code></td>
+                  <td>出力する SVG を整形</td>
+                  <td></td>
+                  <td>無効</td>
+                </tr>
+                <tr>
+                  <td><code>--version</code></td>
+                  <td>コマンドのバージョンを表示</td>
+                </tr>
+                <tr>
+                  <td><code>--help</code></td>
+                  <td>コマンドのヘルプを表示</td>
+                </tr>
+              </tbody>
+            </table>
+            <dl class="mt-3">
+              <dt>実行例</dt>
+              <dd>
+                <code
+                  >$ scalable-dots --type=CIRCLE --size=32 --gap=0
+                  --pretty-print input.png > output.svg</code
+                >
+              </dd>
+            </dl>
           </div>
         </div>
       </div>
     </div>
-    <div class="footer pt-5">
+    <div class="footer mt-3 pt-5">
       <div class="container">
         <div class="row">
           <div class="col-12 col-sm-6 col-md-3">
