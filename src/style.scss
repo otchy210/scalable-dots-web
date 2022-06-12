@@ -163,6 +163,9 @@ $form-range-track-bg: rgba(var(--bs-white-rgb), 0.7);
       background-image: url('/images/icon-shop.svg');
     }
   }
+  p {
+    text-indent: 1em;
+  }
   dl {
     dt {
       font-weight: 500;
