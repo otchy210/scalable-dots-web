@@ -1,13 +1,4 @@
-import {
-  getGapRange,
-  getGapValue,
-  getSizeRange,
-  getSizeValue,
-  getSvgHolder,
-  getZoom,
-  getZoomRange,
-  getZoomValue,
-} from '../common/elements';
+import { getGapRange, getGapValue, getSizeRange, getSizeValue, getSvgHolder, getZoom, getZoomRange, getZoomValue } from '../common/elements';
 import { updateSvg } from '../common/updateSvg';
 
 export const initOnInputSvgOptionsHandlers = () => {

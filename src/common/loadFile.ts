@@ -1,15 +1,6 @@
-import {
-  getFileName,
-  getFileTypeErrorModal,
-  getPreviewThumbnail,
-} from './elements';
+import { getFileName, getFileTypeErrorModal, getPreviewThumbnail } from './elements';
 
-const validFileTypes = new Set([
-  'image/png',
-  'image/jpeg',
-  'image/gif',
-  'image/webp',
-]);
+const validFileTypes = new Set(['image/png', 'image/jpeg', 'image/gif', 'image/webp']);
 
 export const loadFile = (file: File) => {
   if (!validFileTypes.has(file.type)) {

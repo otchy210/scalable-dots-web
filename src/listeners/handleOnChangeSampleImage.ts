@@ -1,9 +1,5 @@
 import { closePreview } from '../common/closePreview';
-import {
-  getFileName,
-  getPreviewThumbnail,
-  getSampleImage,
-} from '../common/elements';
+import { getFileName, getPreviewThumbnail, getSampleImage } from '../common/elements';
 
 export const initOnChangeSampleImageHandler = () => {
   const sampleImage = getSampleImage();

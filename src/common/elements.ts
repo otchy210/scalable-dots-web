@@ -46,10 +46,7 @@ export const getPreview = () => {
 
 let previewThumbnail: HTMLImageElement;
 export const getPreviewThumbnail = () => {
-  return (previewThumbnail = queryIfNoElementGiven(
-    previewThumbnail,
-    '.preview .img-thumbnail'
-  ));
+  return (previewThumbnail = queryIfNoElementGiven(previewThumbnail, '.preview .img-thumbnail'));
 };
 
 let fileName: HTMLDivElement;
@@ -119,17 +116,12 @@ export const getFileTypeErrorModal = () => {
   if (fileSizeErrorModal) {
     return fileSizeErrorModal;
   }
-  return (fileSizeErrorModal = new Modal(
-    queryIfNoElementGiven(fileTypeError, '#file-type-error')
-  ));
+  return (fileSizeErrorModal = new Modal(queryIfNoElementGiven(fileTypeError, '#file-type-error')));
 };
 
 let fileSizeInfo: HTMLDivElement;
 export const getFileSizeInfo = () => {
-  return (fileSizeInfo = queryIfNoElementGiven(
-    fileSizeInfo,
-    '#file-size-info'
-  ));
+  return (fileSizeInfo = queryIfNoElementGiven(fileSizeInfo, '#file-size-info'));
 };
 let fileSizeInfoModal: Modal;
 export const getFileSizeInfoModal = () => {
@@ -140,10 +132,7 @@ export const getFileSizeInfoModal = () => {
 };
 let fileSizeWarn: HTMLDivElement;
 export const getFileSizeWarn = () => {
-  return (fileSizeWarn = queryIfNoElementGiven(
-    fileSizeWarn,
-    '#file-size-warn'
-  ));
+  return (fileSizeWarn = queryIfNoElementGiven(fileSizeWarn, '#file-size-warn'));
 };
 let fileSizeWarnModal: Modal;
 export const getFileSizeWarnModal = () => {

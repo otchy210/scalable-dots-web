@@ -1,10 +1,4 @@
-import {
-  getFileName,
-  getGap,
-  getSize,
-  getSvgHolder,
-  getType,
-} from '../common/elements';
+import { getFileName, getGap, getSize, getSvgHolder, getType } from '../common/elements';
 import { ClickEventListener } from '../types';
 
 export const handleOnClickSaveSvg: ClickEventListener = {

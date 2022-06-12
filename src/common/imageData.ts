@@ -1,10 +1,4 @@
-import {
-  getFileSizeInfo,
-  getFileSizeInfoModal,
-  getFileSizeWarn,
-  getFileSizeWarnModal,
-  getPreviewThumbnail,
-} from './elements';
+import { getFileSizeInfo, getFileSizeInfoModal, getFileSizeWarn, getFileSizeWarnModal, getPreviewThumbnail } from './elements';
 
 let imageData: ImageData;
 const loadImageData = () => {
@@ -44,9 +38,7 @@ export const updateImageData = async () => {
       resolve(loadImageData());
       return;
     }
-    const [elem, modal] = showWarn
-      ? [getFileSizeWarn(), getFileSizeWarnModal()]
-      : [getFileSizeInfo(), getFileSizeInfoModal()];
+    const [elem, modal] = showWarn ? [getFileSizeWarn(), getFileSizeWarnModal()] : [getFileSizeInfo(), getFileSizeInfoModal()];
     const onHidden = () => {
       if (elem.dataset.proceed === 'true') {
         resolve(loadImageData());
