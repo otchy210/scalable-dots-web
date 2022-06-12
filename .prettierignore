@@ -1,4 +1,6 @@
 node_modules/
+local_resources/
 coverage/
 package-lock.json
 docs/script.js
+docs/style.css
