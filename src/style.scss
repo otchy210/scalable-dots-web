@@ -19,12 +19,21 @@ $darker: #231f10;
 // additional variable overrides
 $form-range-track-bg: rgba(var(--bs-white-rgb), 0.7);
 
-// Optional
-@import '~bootstrap/scss/bootstrap.scss';
-// TODO: optimize import -> https://getbootstrap.jp/docs/5.0/customize/sass/
-// @import "../node_modules/bootstrap/scss/root";
-// @import "../node_modules/bootstrap/scss/reboot";
-// @import "../node_modules/bootstrap/scss/type";
+// Optimized import https://getbootstrap.jp/docs/5.0/customize/sass/
+@import '../node_modules/bootstrap/scss/root';
+@import '../node_modules/bootstrap/scss/reboot';
+@import '../node_modules/bootstrap/scss/type';
+
+@import '../node_modules/bootstrap/scss/buttons';
+@import '../node_modules/bootstrap/scss/close';
+@import '../node_modules/bootstrap/scss/containers';
+@import '../node_modules/bootstrap/scss/forms';
+@import '../node_modules/bootstrap/scss/grid';
+@import '../node_modules/bootstrap/scss/helpers';
+@import '../node_modules/bootstrap/scss/images';
+@import '../node_modules/bootstrap/scss/modal';
+@import '../node_modules/bootstrap/scss/utilities';
+@import '../node_modules/bootstrap/scss/utilities/api';
 
 ////////////////////////
 //  Additional utilities
