@@ -13,8 +13,7 @@ import { handleOnClickSaveSvg } from './listeners/handleOnClickSaveSvg';
 import { handleOnClickFileSizeInfoProceed } from './listeners/handleOnClickFileSizeInfoProceed';
 import { handleOnClickFileSizeWarnProceed } from './listeners/handleOnClickFileSizeWarnProceed';
 import './style.scss';
-import 'bootstrap'; // for all js
-// TODO: optimize import https://getbootstrap.jp/docs/5.0/customize/optimize/
+import 'bootstrap'; // For all Bootstrap JavaScript. No need of manual optimization since it will be pretty well optimized by webpack.
 
 const clickEventListeners: ClickEventListener[] = [
   handleOnClickJumbotronBg,
