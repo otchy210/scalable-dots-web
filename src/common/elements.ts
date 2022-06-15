@@ -54,6 +54,11 @@ export const getFileName = () => {
   return (fileName = queryIfNoElementGiven(fileName, '.file-name'));
 };
 
+let imageDimension: HTMLDivElement;
+export const getImageDimension = () => {
+  return (imageDimension = queryIfNoElementGiven(imageDimension, '.image-dimension'));
+};
+
 let svgBox: HTMLDivElement;
 export const getSvgBox = () => {
   return (svgBox = queryIfNoElementGiven(svgBox, '.svg-box'));

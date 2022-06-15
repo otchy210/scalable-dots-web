@@ -1,4 +1,4 @@
-import { getFileSizeInfo, getFileSizeInfoModal, getFileSizeWarn, getFileSizeWarnModal, getPreviewThumbnail } from './elements';
+import { getFileSizeInfo, getFileSizeInfoModal, getFileSizeWarn, getFileSizeWarnModal, getImageDimension, getPreviewThumbnail } from './elements';
 
 let imageData: ImageData;
 const loadImageData = () => {
@@ -28,6 +28,8 @@ export const updateImageData = async () => {
   if (!width || !height) {
     throw new Error("Can't get image size");
   }
+  const imageDimension = getImageDimension();
+  imageDimension.innerHTML = `[${width} x ${height}]`;
   return new Promise<ImageData>((resolve, reject) => {
     // relatively large
     const showInfo = width * height > 64 * 64;
