@@ -1,6 +1,6 @@
 {
   "name": "@otchy/scalable-dots-web",
-  "version": "0.0.51",
+  "version": "0.0.52",
   "description": "",
   "scripts": {
     "build": "webpack",
