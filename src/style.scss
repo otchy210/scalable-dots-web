@@ -157,6 +157,9 @@ $form-range-track-bg: rgba(var(--bs-white-rgb), 0.7);
     background-repeat: no-repeat;
     padding-left: 1.4em;
     background-position: left center;
+    &.icon-board {
+      background-image: url('/images/icon-board.svg');
+    }
     &.icon-box {
       background-image: url('/images/icon-box.svg');
     }
