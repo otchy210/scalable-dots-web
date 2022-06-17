@@ -153,121 +153,129 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-12 col-md-6 col-xl-4">
-            <h3 class="icon icon-box">ScalableDots とは</h3>
-            <p>
-              ScalableDots は PNG や GIF などの画像ファイルを SVG 画像に変換するツールです。元の画像にある各ピクセルを一つずつ、SVG
-              上の要素に置き換えて元の色で塗りつぶすことで変換を行っています。主な用途としては、ドット絵 (Pixel art) を SVG に変換するために使います。
-            </p>
-            <p>
-              ドット絵を Web で公開する場合、等倍で表示すると小さすぎてドット絵としての魅力が十分に伝わらないので、一般には拡大して表示するようにしますが、SVG
-              画像として公開する事で任意の倍率で綺麗に拡大することが出来るようになります。
-            </p>
+          <div class="d-flex col-12 col-md-6 col-xl-4">
+            <div class="panel">
+              <h3 class="icon icon-box">ScalableDots とは</h3>
+              <p>
+                ScalableDots は PNG や GIF などの画像ファイルを SVG 画像に変換するツールです。元の画像にある各ピクセルを一つずつ、SVG
+                上の要素に置き換えて元の色で塗りつぶすことで変換を行っています。主な用途としては、ドット絵 (Pixel art) を SVG に変換するために使います。
+              </p>
+              <p>
+                ドット絵を Web で公開する場合、等倍で表示すると小さすぎてドット絵としての魅力が十分に伝わらないので、一般には拡大して表示するようにしますが、SVG
+                画像として公開する事で任意の倍率で綺麗に拡大することが出来るようになります。
+              </p>
+            </div>
           </div>
-          <div class="col-12 col-md-6 col-xl-4">
-            <h3 class="icon icon-shop">なぜ SVG？</h3>
-            <p>
-              元のドット絵を拡大する際、ラスター画像の画像拡大アルゴリズムによってはぼやけた表示になってしまうので、従来はエッジが綺麗になるように倍率やアルゴリズムを選ぶ必要がありました。もちろんそれをサポートするツールも存在しますが、複数の倍率で表示したい場合はその数だけファイルを用意して使い分けるなどの面倒がありました。
-            </p>
-            <p>一方の SVG 画像はベクター形式であるため、どこまで拡大してもドット絵としての魅力を保ったまま綺麗に表示することが出来ます。</p>
+          <div class="d-flex mt-3 col-12 mt-md-0 col-md-6 col-xl-4">
+            <div class="panel">
+              <h3 class="icon icon-shop">なぜ SVG？</h3>
+              <p>
+                元のドット絵を拡大する際、ラスター画像の画像拡大アルゴリズムによってはぼやけた表示になってしまうので、従来はエッジが綺麗になるように倍率やアルゴリズムを選ぶ必要がありました。もちろんそれをサポートするツールも存在しますが、複数の倍率で表示したい場合はその数だけファイルを用意して使い分けるなどの面倒がありました。
+              </p>
+              <p>一方の SVG 画像はベクター形式であるため、どこまで拡大してもドット絵としての魅力を保ったまま綺麗に表示することが出来ます。</p>
+            </div>
           </div>
-          <div class="col-12 col-md-6 col-xl-4">
-            <h3 class="icon icon-pot">ブラウザ完結型</h3>
-            <p>
-              いま開いているこのページは ScalableDots ウェブ版ですが、その他の多くのオンラインツールとは異なり、ScalableDots
-              は全ての処理をブラウザ内で完結しています。ファイルをアップロードする必要がないので高速で動作し、セキュリティ上の懸念もありません。
-            </p>
-            <p>
-              したがって処理を行う画像のサイズにも制限はありませんが、ブラウザ上での処理のパフォーマンスは当然ながらあなたが使っているパソコンあるいはスマホの処理能力に依存します。
-            </p>
+          <div class="d-flex mt-3 col-12 col-md-6 mt-xl-0 col-xl-4">
+            <div class="panel">
+              <h3 class="icon icon-pot">ブラウザ完結型</h3>
+              <p>
+                いま開いているこのページは ScalableDots ウェブ版ですが、その他の多くのオンラインツールとは異なり、ScalableDots
+                は全ての処理をブラウザ内で完結しています。ファイルをアップロードする必要がないので高速で動作し、セキュリティ上の懸念もありません。
+              </p>
+              <p>
+                したがって処理を行う画像のサイズにも制限はありませんが、ブラウザ上での処理のパフォーマンスは当然ながらあなたが使っているパソコンあるいはスマホの処理能力に依存します。
+              </p>
+            </div>
           </div>
-          <div class="mt-0 col-12 mt-md-3 col-xl-10 offset-xl-1 col-xxl-8 offset-xxl-2">
-            <h3 class="icon icon-shelf">コマンドライン版</h3>
-            <p>
-              ブラウザで処理をするには重たいサイズの大きな画像や、大量のファイルをまとめて変換したい人のために、コマンドライン版も用意されています。必要に応じてコマンドライン版の利用も検討して下さい。<br />
-            </p>
-            <h4>システム要件</h4>
-            <p>
-              Node.js バージョン 18 以降が必要です。事前に<a
-                href="https://www.google.com/search?q=Node.js+%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB"
-                target="_blank"
-                >インストール</a
-              >して下さい。
-            </p>
-            <h4>インストール方法</h4>
-            <p>ScalableDots コマンドライン版のインストールには Node.js に同梱されているコマンドの <code>npm</code> を使います。<br /></p>
-            <dl class="ps-3">
-              <dt>特定のフォルダにインストールする場合</dt>
-              <dd><code>$ npm install @otchy/scalable-dots-cli</code></dd>
-              <dt>システム全体にインストールする場合</dt>
-              <dd><code>$ npm install -g @otchy/scalable-dots-cli</code></dd>
-            </dl>
-            <h4>実行方法</h4>
-            <p>
-              <code>scalable-dots</code> コマンドは引数に画像ファイルを渡すと SVG
-              に変換した結果を標準出力に書き出すので、それを別のファイルにリダイレクトして保存してください。
-            </p>
-            <dl class="ps-3">
-              <dt>特定のフォルダにインストールした場合</dt>
-              <dd><code>$ npx scalable-dots input.png > output.svg</code></dd>
-              <dt>システム全体にインストールした場合</dt>
-              <dd><code>$ scalable-dots input.png > output.svg</code></dd>
-            </dl>
-            <h4>コマンドラインオプション</h4>
-            <p>
-              <code>scalable-dots</code>
-              コマンドには以下のオプションを指定する事が出来ます。
-            </p>
-            <table>
-              <thead>
-                <tr>
-                  <th>オプション</th>
-                  <th>説明</th>
-                  <th>備考</th>
-                  <th>デフォルト</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><code>--type</code></td>
-                  <td>ドットの種類</td>
-                  <td><code>SQUARE</code>, <code>CIRCLE</code>, <code>RHOMBUS</code> のいずれか</td>
-                  <td><code>SQUARE</code></td>
-                </tr>
-                <tr>
-                  <td><code>--size</code></td>
-                  <td>ドットのサイズ</td>
-                  <td>整数値で指定</td>
-                  <td><code>16</code></td>
-                </tr>
-                <tr>
-                  <td><code>--gap</code></td>
-                  <td>ドット同士のすき間</td>
-                  <td>整数値で指定</td>
-                  <td><code>1</code></td>
-                </tr>
-                <tr>
-                  <td><code>--pretty-print</code></td>
-                  <td>出力する SVG を整形</td>
-                  <td></td>
-                  <td>無効</td>
-                </tr>
-                <tr>
-                  <td><code>--version</code></td>
-                  <td>コマンドのバージョンを表示</td>
-                </tr>
-                <tr>
-                  <td><code>--help</code></td>
-                  <td>コマンドのヘルプを表示</td>
-                </tr>
-              </tbody>
-            </table>
-            <dl class="mt-3 ps-3">
-              <dt>実行例</dt>
-              <dd>
-                <code>$ scalable-dots --type=CIRCLE --size=32 --gap=0 --pretty-print input.png > output.svg</code>
-              </dd>
-            </dl>
+          <div class="d-flex mt-3 col-12 col-xl-10 offset-xl-1 col-xxl-8 offset-xxl-2">
+            <div class="panel">
+              <h3 class="icon icon-shelf">コマンドライン版</h3>
+              <p>
+                ブラウザで処理をするには重たいサイズの大きな画像や、大量のファイルをまとめて変換したい人のために、コマンドライン版も用意されています。必要に応じてコマンドライン版の利用も検討して下さい。<br />
+              </p>
+              <h4>システム要件</h4>
+              <p>
+                Node.js バージョン 18 以降が必要です。事前に<a
+                  href="https://www.google.com/search?q=Node.js+%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB"
+                  target="_blank"
+                  >インストール</a
+                >して下さい。
+              </p>
+              <h4>インストール方法</h4>
+              <p>ScalableDots コマンドライン版のインストールには Node.js に同梱されているコマンドの <code>npm</code> を使います。<br /></p>
+              <dl class="ps-3">
+                <dt>特定のフォルダにインストールする場合</dt>
+                <dd><code>$ npm install @otchy/scalable-dots-cli</code></dd>
+                <dt>システム全体にインストールする場合</dt>
+                <dd><code>$ npm install -g @otchy/scalable-dots-cli</code></dd>
+              </dl>
+              <h4>実行方法</h4>
+              <p>
+                <code>scalable-dots</code> コマンドは引数に画像ファイルを渡すと SVG
+                に変換した結果を標準出力に書き出すので、それを別のファイルにリダイレクトして保存してください。
+              </p>
+              <dl class="ps-3">
+                <dt>特定のフォルダにインストールした場合</dt>
+                <dd><code>$ npx scalable-dots input.png > output.svg</code></dd>
+                <dt>システム全体にインストールした場合</dt>
+                <dd><code>$ scalable-dots input.png > output.svg</code></dd>
+              </dl>
+              <h4>コマンドラインオプション</h4>
+              <p>
+                <code>scalable-dots</code>
+                コマンドには以下のオプションを指定する事が出来ます。
+              </p>
+              <table>
+                <thead>
+                  <tr>
+                    <th>オプション</th>
+                    <th>説明</th>
+                    <th>備考</th>
+                    <th>デフォルト</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>--type</code></td>
+                    <td>ドットの種類</td>
+                    <td><code>SQUARE</code>, <code>CIRCLE</code>, <code>RHOMBUS</code> のいずれか</td>
+                    <td><code>SQUARE</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>--size</code></td>
+                    <td>ドットのサイズ</td>
+                    <td>整数値で指定</td>
+                    <td><code>16</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>--gap</code></td>
+                    <td>ドット同士のすき間</td>
+                    <td>整数値で指定</td>
+                    <td><code>1</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>--pretty-print</code></td>
+                    <td>出力する SVG を整形</td>
+                    <td></td>
+                    <td>無効</td>
+                  </tr>
+                  <tr>
+                    <td><code>--version</code></td>
+                    <td>コマンドのバージョンを表示</td>
+                  </tr>
+                  <tr>
+                    <td><code>--help</code></td>
+                    <td>コマンドのヘルプを表示</td>
+                  </tr>
+                </tbody>
+              </table>
+              <dl class="mt-3 ps-3">
+                <dt>実行例</dt>
+                <dd>
+                  <code>$ scalable-dots --type=CIRCLE --size=32 --gap=0 --pretty-print input.png > output.svg</code>
+                </dd>
+              </dl>
+            </div>
           </div>
         </div>
       </div>
