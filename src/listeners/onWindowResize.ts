@@ -4,7 +4,7 @@ import { adjustSvgBoxHeight } from '../common/adjustSvgBoxHeight';
 
 export const onWindowResize = () => {
   adjustSvgBoxHeight();
-  if (getPreview().style.height) {
+  if (getPreview().style.maxHeight) {
     adjustPreviewHeight();
   }
 };

@@ -12,6 +12,7 @@ import { initDragAndDrop } from './listeners/handleDragAndDrop';
 import { handleOnClickSaveSvg } from './listeners/handleOnClickSaveSvg';
 import { handleOnClickFileSizeInfoProceed } from './listeners/handleOnClickFileSizeInfoProceed';
 import { handleOnClickFileSizeWarnProceed } from './listeners/handleOnClickFileSizeWarnProceed';
+import { handleOnClickClosePreview } from './listeners/handleOnClickClosePreview';
 import './style.scss';
 import 'bootstrap'; // For all Bootstrap JavaScript. No need of manual optimization since it will be pretty well optimized by webpack.
 
@@ -23,6 +24,7 @@ const clickEventListeners: ClickEventListener[] = [
   handleOnClickFileSizeInfoProceed,
   handleOnClickFileSizeWarnProceed,
   handleOnClickSaveSvg,
+  handleOnClickClosePreview,
 ];
 document.addEventListener('click', (e: MouseEvent) => {
   const target = e.target as HTMLElement;
