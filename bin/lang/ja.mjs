@@ -1,1 +1,36 @@
-export const i18n = { lang: 'ja', output: 'docs/' };
+export const i18n = {
+  lang: 'ja',
+  output: 'docs/',
+  t: {
+    'The tool to generate scalable pixel art images': '綺麗に拡大出来るドット絵生成ツール',
+    'The tool to convert pixel art images such as PNG or GIF to SVG file. So that you can scale it with beautiful edges of each pixel. You can preview it on your browser as well as it provides command line tool.':
+      'PNG や GIF などのドット絵 (Pixel art) を、拡大しても綺麗なまま表示出来る SVG ファイルに変換するツールです。ブラウザ上でプレビューを確認しながら変換できるほか、コマンドラインツールも提供しています。',
+    'og:url': 'https://scalable-dots.otchy.net',
+    'Drop image files or<br />click to select': '画像ファイルをドロップ<br />もしくはクリックして選択',
+    'Try sample images first?': 'とりあえずサンプル画像で試す？',
+    'Select samaple image': 'サンプル画像を選択',
+    'Seeing is believing': '百聞は一見に如かず',
+    'SVG Settings': 'SVG 設定',
+    Type: 'タイプ',
+    Size: 'サイズ',
+    Gap: 'すき間',
+    Preview: 'プレビュー',
+    'Background color': '背景色',
+    Black: '黒',
+    Gray: '灰',
+    White: '白',
+    Zoom: 'ズーム',
+    'Save SVG': 'SVG を保存',
+    Close: '閉じる',
+  },
+  arr: {
+    'sample-images': [
+      [['pigeon.png'], ['ハト [8 x 8] (提供: ほわいとわいと様)']],
+      [['tortoise.png'], ['陸ガメ [12 x 8] (提供: ほわいとわいと様)']],
+      [['bottle.png'], ['タグ付き小瓶 [24 x 24] (提供: Akke様)']],
+      [['airship.png'], ['飛空挺 [32 x 32] (提供: ぴぽや様)']],
+      [['elf.png'], ['エルフ [45 x 55] (提供: 通天機様)']],
+      [['girl.png'], ['青い服の女の子 [64 x 64] (提供: Akke様)']],
+    ],
+  },
+};

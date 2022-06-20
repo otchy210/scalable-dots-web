@@ -1,9 +1,31 @@
-import { writeFileSync } from 'fs';
+import { mkdirSync, writeFileSync } from 'fs';
 import { join } from 'path';
 
 const { i18n } = await import(`./lang/${process.argv[2]}.mjs`);
 const output = join(i18n.output, 'index.html');
 
+const t = (key) => {
+  if (i18n.t[key]) {
+    return i18n.t[key];
+  }
+  return key;
+};
+
+const arr = (key) => {
+  if (i18n.arr[key]) {
+    return i18n.arr[key];
+  }
+  return [];
+};
+
+const enClass = (className) => {
+  if (i18n.lang === 'en') {
+    return ` ${className}`;
+  }
+  return '';
+};
+
+mkdirSync(i18n.output, { recursive: true });
 writeFileSync(
   output,
   `
@@ -12,7 +34,7 @@ writeFileSync(
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="/favicon.png" />
-    <title>ScalableDots - 綺麗に拡大出来るドット絵生成ツール</title>
+    <title>ScalableDots - ${t('The tool to generate scalable pixel art images')}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet" />
@@ -28,12 +50,14 @@ writeFileSync(
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YK38G3B4MG"></script>
     <script src="/script.js"></script>
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="ScalableDots - 綺麗に拡大出来るドット絵生成ツール" />
+    <meta property="og:title" content="ScalableDots - ${t('The tool to generate scalable pixel art images')}" />
     <meta
       property="og:description"
-      content="PNG や GIF などのドット絵 (Pixel art) を、拡大しても綺麗なまま表示出来る SVG ファイルに変換するツールです。ブラウザ上でプレビューを確認しながら変換できるほか、コマンドラインツールも提供しています。"
+      content="${t(
+        'The tool to convert pixel art images such as PNG or GIF to SVG file. So that you can scale it with beautiful edges of each pixel. You can preview it on your browser as well as it provides command line tool.'
+      )}"
     />
-    <meta property="og:url" content="https://scalable-dots.otchy.net" />
+    <meta property="og:url" content="${t('og:url')}" />
     <meta property="og:site_name" content="ScalableDots" />
     <meta property="og:image" content="https://scalable-dots.otchy.net/images/summary.png" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -57,25 +81,22 @@ writeFileSync(
               <div class="d-flex">
                 <div class="drop-here mx-auto mb-3 p-4 text-center">
                   <img src="/images/drop-here.svg" class="mb-3" /><br />
-                  画像ファイルをドロップ<br />もしくはクリックして選択
+                  ${t('Drop image files or<br />click to select')}
                   <input class="file-input" type="file" accept="image/gif,image/jpeg,image/png,image/webp" />
                 </div>
               </div>
-              <div>とりあえずサンプル画像で試す？</div>
+              <div>${t('Try sample images first?')}</div>
               <select class="form-select sample-image">
-                <option value="" selected>サンプル画像を選択</option>
-                <option value="pigeon.png">ハト [8 x 8] (提供: ほわいとわいと様)</option>
-                <option value="tortoise.png">陸ガメ [12 x 8] (提供: ほわいとわいと様)</option>
-                <option value="bottle.png">タグ付き小瓶 [24 x 24] (提供: Akke様)</option>
-                <option value="airship.png">飛空挺 [32 x 32] (提供: ぴぽや様)</option>
-                <option value="elf.png">エルフ [45 x 55] (提供: 通天機様)</option>
-                <option value="girl.png">青い服の女の子 [64 x 64] (提供: Akke様)</option>
+                <option value="" selected>▼ ${t('Select samaple image')}</option>
+                ${arr('sample-images')
+                  .map((params) => `<option value="${params[0]}">${params[1]}</option>`)
+                  .join('\n                ')}
               </select>
             </div>
           </div>
           <div class="col-12 col-sm-4 col-md-3">
             <div class="dialog p-3">
-              百聞は一見に如かず
+              ${t('Seeing is believing')}
               <div class="btn-group" role="group">
                 <input type="radio" class="btn-check" name="jumbotron-bg" value="svg" id="jumbotron-bg-svg" autocomplete="off" checked />
                 <label class="btn btn-outline-primary" for="jumbotron-bg-svg">SVG</label>
@@ -98,10 +119,10 @@ writeFileSync(
                 <div class="image-dimension mx-auto"></div>
               </div>
               <div class="col-12">
-                <div class="h5 mt-3 preview-header">SVG 設定</div>
+                <div class="h5 mt-3 preview-header">${t('SVG Settings')}</div>
               </div>
               <div class="col-12">
-                <label class="h6 mb-1">タイプ</label>
+                <label class="h6 mb-1">${t('Type')}</label>
                 <div class="btn-group" role="group">
                   <input type="radio" class="btn-check" name="type" value="square" id="type-square" autocomplete="off" checked />
                   <label class="btn btn-outline-primary" for="type-square">■</label>
@@ -113,41 +134,41 @@ writeFileSync(
               </div>
               <div class="col-6 col-sm-12">
                 <label for="size" class="form-label h6 mt-3 mb-0"
-                  >サイズ<small>[<span id="size-value">16</span>]</small></label
+                  >${t('Size')}<small>[<span id="size-value">16</span>]</small></label
                 >
                 <input type="range" class="form-range" min="1" max="32" id="size" value="16" />
               </div>
               <div class="col-6 col-sm-12">
                 <label for="gap" class="form-label h6 mt-3 mb-0"
-                  >すき間<small>[<span id="gap-value">1</span>]</small></label
+                  >${t('Gap')}<small>[<span id="gap-value">1</span>]</small></label
                 >
                 <input type="range" class="form-range" min="0" max="32" id="gap" value="1" />
               </div>
               <div class="col-12">
-                <div class="h5 mt-3 preview-header">プレビュー</div>
+                <div class="h5 mt-3 preview-header">${t('Preview')}</div>
               </div>
               <div class="col-6 col-sm-12">
-                <label class="h6 mb-1">背景色</label>
+                <label class="h6 mb-1">${t('Background color')}</label>
                 <div class="btn-group" role="group">
                   <input type="radio" class="btn-check" name="preview-bg" value="black" id="preview-bg-black" autocomplete="off" />
-                  <label class="btn btn-outline-primary" for="preview-bg-black">黒</label>
+                  <label class="btn btn-outline-primary${enClass('px-1')}" for="preview-bg-black">${t('Black')}</label>
                   <input type="radio" class="btn-check" name="preview-bg" value="gray" id="preview-bg-gray" autocomplete="off" checked />
-                  <label class="btn btn-outline-primary" for="preview-bg-gray">灰</label>
+                  <label class="btn btn-outline-primary${enClass('px-1')}" for="preview-bg-gray">${t('Gray')}</label>
                   <input type="radio" class="btn-check" name="preview-bg" value="white" id="preview-bg-white" autocomplete="off" />
-                  <label class="btn btn-outline-primary" for="preview-bg-white">白</label>
+                  <label class="btn btn-outline-primary${enClass('px-1')}" for="preview-bg-white">${t('White')}</label>
                 </div>
               </div>
               <div class="col-6 col-sm-12">
                 <label for="zoom" class="form-label h6 mt-3 mb-0"
-                  >ズーム<small>[<span id="zoom-value">100%</span>]</small></label
+                  >${t('Zoom')}<small>[<span id="zoom-value">100%</span>]</small></label
                 >
                 <input type="range" class="form-range" min="20" step="20" max="300" id="zoom" value="100" />
               </div>
               <div class="col-12 d-grid mt-3">
-                <button class="save-svg btn btn-primary" type="button">SVG を保存</button>
+                <button class="save-svg btn btn-primary" type="button">${t('Save SVG')}</button>
               </div>
               <div class="col-12 d-grid my-1">
-                <button class="close-preview btn btn-link" type="button">閉じる</button>
+                <button class="close-preview btn btn-link" type="button">${t('Close')}</button>
               </div>
             </div>
           </div>
