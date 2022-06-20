@@ -5,6 +5,8 @@
   "scripts": {
     "build": "webpack",
     "watch": "webpack -w",
+    "gen:ja": "node bin/gen.mjs ja",
+    "gen:en": "node bin/gen.mjs en",
     "start": "webpack-dev-server",
     "serve": "npx http-server docs/",
     "test": "jest",

@@ -1,3 +1,12 @@
+import { writeFileSync } from 'fs';
+import { join } from 'path';
+
+const { i18n } = await import(`./lang/${process.argv[2]}.mjs`);
+const output = join(i18n.output, 'index.html');
+
+writeFileSync(
+  output,
+  `
 <html lang="ja">
   <head>
     <meta charset="utf-8" />
@@ -477,3 +486,5 @@
     ></script>
   </body>
 </html>
+`.trim()
+);
