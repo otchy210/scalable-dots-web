@@ -6,6 +6,7 @@ export const i18n = {
     'The tool to convert pixel art images such as PNG or GIF to SVG file. So that you can scale it with beautiful edges of each pixel. You can preview it on your browser as well as it provides command line tool.':
       'PNG や GIF などのドット絵 (Pixel art) を、拡大しても綺麗なまま表示出来る SVG ファイルに変換するツールです。ブラウザ上でプレビューを確認しながら変換できるほか、コマンドラインツールも提供しています。',
     'og:url': 'https://scalable-dots.otchy.net',
+    'switch-lang': '日本語 | <a href="/en/">English</a>',
     'Drop image files or<br />click to select': '画像ファイルをドロップ<br />もしくはクリックして選択',
     'Try sample images first?': 'とりあえずサンプル画像で試す？',
     'Select samaple image': 'サンプル画像を選択',
@@ -36,7 +37,7 @@ export const i18n = {
     'SVG images, on the other hand, are in vector format, so no matter how much we scale it, it will always be shown with a sharp edge of pixels at any magnification.':
       '一方の SVG 画像はベクター形式であるため、どこまで拡大してもドット絵としての魅力を保ったまま綺麗に表示することが出来ます。',
     'Complete in browsers': 'ブラウザ完結型',
-    'The page you’re looking at now is the web version of ScalableDots. Unlike many other online tools, ScalableDots does everything in the browser. There is no need for uploading files thus it is fast, and there are no security concerns.':
+    "The page you're looking at now is the web version of ScalableDots. Unlike many other online tools, ScalableDots does everything in the browser. There is no need for uploading files thus it is fast, and there are no security concerns.":
       'いま開いているこのページは ScalableDots ウェブ版ですが、その他の多くのオンラインツールとは異なり、ScalableDots は全ての処理をブラウザ内で完結しています。ファイルをアップロードする必要がないので高速で動作し、セキュリティ上の懸念もありません。',
     'Therefore, there is no limit to the size of the image to be processed, but the performance of the processing on the browser naturally depends on the computing resource of your machine.':
       'したがって処理を行う画像のサイズにも制限はありませんが、ブラウザ上での処理のパフォーマンスは当然ながらあなたが使っているパソコンあるいはスマホの処理能力に依存します。',

@@ -68,12 +68,15 @@ writeFileSync(
       <div class="container">
         <div class="row">
           <div class="col-12 col-md-3">
-            <div class="d-flex justify-content-center pb-3">
+            <div class="d-flex justify-content-center">
               <div class="logo-wrapper">
                 <h1 class="m-0">
                   <img src="/images/logo.svg" alt="ScalableDots" />
                 </h1>
               </div>
+            </div>
+            <div class="text-center pt-1 pb-3">
+              ${t('switch-lang')}
             </div>
           </div>
           <div class="col-12 col-sm-8 col-md-6 mb-3 mb-sm-0">
@@ -227,7 +230,7 @@ writeFileSync(
               <h3 class="icon icon-pot">${t('Complete in browsers')}</h3>
               <p>
               ${t(
-                'The page you’re looking at now is the web version of ScalableDots. Unlike many other online tools, ScalableDots does everything in the browser. There is no need for uploading files thus it is fast, and there are no security concerns.'
+                "The page you're looking at now is the web version of ScalableDots. Unlike many other online tools, ScalableDots does everything in the browser. There is no need for uploading files thus it is fast, and there are no security concerns."
               )}
               </p>
               <p>

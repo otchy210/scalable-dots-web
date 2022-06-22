@@ -3,6 +3,7 @@ export const i18n = {
   output: 'docs/en/',
   t: {
     'og:url': 'https://scalable-dots.otchy.net/en/',
+    'switch-lang': '<a href="/">日本語</a> | English',
   },
   arr: {
     'sample-images': [
