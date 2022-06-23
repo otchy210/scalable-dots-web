@@ -190,9 +190,8 @@ writeFileSync(
         <div class="row">
           <div class="col mb-3">
             <h2 class="m-0">
-              ${t('SVG image allows you to make beautifully scalable pixel art!')}<small>${t(
-    'Vector image for pixel art? Yes, you no longer need to know what nearest neighbour interpolation is!'
-  )}</small>
+              ${t('SVG image allows you to make beautifully scalable pixel art!')}
+              <small>${t('Vector image for pixel art? Yes, you no longer need to know what nearest neighbour interpolation is!')}</small>
             </h2>
           </div>
         </div>
@@ -206,9 +205,9 @@ writeFileSync(
                 )}
               </p>
               <p>
-              ${t(
-                "It's hard to show how amazing the pixel art is when we show it on the web without scaling. By showing the pixel art as an SVG image, it can be nicely scaled at any magnification."
-              )}
+                ${t(
+                  "It's hard to show how amazing the pixel art is when we show it on the web without scaling. By showing the pixel art as an SVG image, it can be nicely scaled at any magnification."
+                )}
               </p>
             </div>
           </div>
@@ -220,18 +219,20 @@ writeFileSync(
                   'When scaling pixel art images, typical raster image scaling algorithms result in a blurred image, so we need to select a proper algorithm as well as proper magnification to make each pixel edge sharp. Of course, there are tools that support this, but if we want to show it at multiple magnifications, we have to prepare multiple files as needed and switch them appropriately.'
                 )}
               </p>
-              <p>${t(
-                'SVG images, on the other hand, are in vector format, so no matter how much we scale it, it will always be shown with a sharp edge of pixels at any magnification.'
-              )}</p>
+              <p>
+                ${t(
+                  'SVG images, on the other hand, are in vector format, so no matter how much we scale it, it will always be shown with a sharp edge of pixels at any magnification.'
+                )}
+              </p>
             </div>
           </div>
           <div class="d-flex mt-3 col-12 col-md-6 mt-xl-0 col-xl-4">
             <div class="panel">
               <h3 class="icon icon-pot">${t('Complete in browsers')}</h3>
               <p>
-              ${t(
-                "The page you're looking at now is the web version of ScalableDots. Unlike many other online tools, ScalableDots does everything in the browser. There is no need for uploading files thus it is fast, and there are no security concerns."
-              )}
+                ${t(
+                  "The page you're looking at now is the web version of ScalableDots. Unlike many other online tools, ScalableDots does everything in the browser. There is no need for uploading files thus it is fast, and there are no security concerns."
+                )}
               </p>
               <p>
                 ${t(
@@ -242,88 +243,88 @@ writeFileSync(
           </div>
           <div class="d-flex mt-3 col-12 offset-xl-1 col-xl-10 offset-xxl-0 col-xxl-8">
             <div class="panel">
-              <h3 class="icon icon-shelf">コマンドライン版</h3>
+              <h3 class="icon icon-shelf">${t('Command line version')}</h3>
               <p>
-                ブラウザで処理をするには重たいサイズの大きな画像や、大量のファイルをまとめて変換したい人のために、コマンドライン版も用意されています。必要に応じてコマンドライン版の利用も検討して下さい。
+                ${t(
+                  'A command line version is also available for those who want to convert large images that are too heavy to process in a browser, or for those who want to convert a large number of files at once. Please consider using the command line version if necessary.'
+                )}
               </p>
-              <h4>システム要件</h4>
+              <h4>${t('System requirement')}</h4>
               <p>
-                Node.js バージョン 18 以降が必要です。事前に<a
-                  href="https://www.google.com/search?q=Node.js+%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB"
-                  target="_blank"
-                  >インストール</a
-                >して下さい。
+                ${t(
+                  'Node.js version 18 or later is required. Please <a href="https://www.google.com/search?q=Node.js+install" target="_blank">install</a> it in advance.'
+                )}
               </p>
-              <h4>インストール方法</h4>
-              <p>ScalableDots コマンドライン版のインストールには Node.js に同梱されているコマンドの <code>npm</code> を使います。</p>
+              <h4>${t('How to install')}</h4>
+              <p>${t('To install the command line version of ScalableDots, use <code>npm</code> command bundled with Node.js.')}</p>
               <dl class="ps-3">
-                <dt>特定のフォルダにインストールする場合</dt>
+                <dt>${t('To install in a specific folder')}</dt>
                 <dd><code>$ npm install @otchy/scalable-dots-cli</code></dd>
-                <dt>システム全体にインストールする場合</dt>
+                <dt>${t('To install for the entire system')}</dt>
                 <dd><code>$ npm install -g @otchy/scalable-dots-cli</code></dd>
               </dl>
-              <h4>実行方法</h4>
+              <h4>${t('How to run')}</h4>
               <p>
-                <code>scalable-dots</code> コマンドは引数に画像ファイルを渡すと SVG
-                に変換した結果を標準出力に書き出すので、それを別のファイルにリダイレクトして保存してください。
+                ${t(
+                  'The <code>scalable-dots</code> command writes the result of the conversion to SVG to standard output when an image file is passed as an argument, so redirect it to another file and save it.'
+                )}
               </p>
               <dl class="ps-3">
-                <dt>特定のフォルダにインストールした場合</dt>
+                <dt>${t('If installed in a specific folder')}</dt>
                 <dd><code>$ npx scalable-dots input.png > output.svg</code></dd>
-                <dt>システム全体にインストールした場合</dt>
+                <dt>${t('If installed for the entire system')}</dt>
                 <dd><code>$ scalable-dots input.png > output.svg</code></dd>
               </dl>
-              <h4>コマンドラインオプション</h4>
+              <h4>${t('Command line options')}</h4>
               <p>
-                <code>scalable-dots</code>
-                コマンドには以下のオプションを指定する事が出来ます。
+                ${t('The <code>scalable-dots</code> command accepts the following options')}
               </p>
               <table>
                 <thead>
                   <tr>
-                    <th>オプション</th>
-                    <th>説明</th>
-                    <th>備考</th>
-                    <th>デフォルト</th>
+                    <th>${t('Option')}</th>
+                    <th>${t('Description')}</th>
+                    <th>${t('Note')}</th>
+                    <th>${t('Default')}</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td><code>--type</code></td>
-                    <td>ドットの種類</td>
-                    <td><code>SQUARE</code>, <code>CIRCLE</code>, <code>RHOMBUS</code> のいずれか</td>
+                    <td>${t('Type of dots')}</td>
+                    <td>${t('<code>SQUARE</code>, <code>CIRCLE</code>, or <code>RHOMBUS</code>')}</td>
                     <td><code>SQUARE</code></td>
                   </tr>
                   <tr>
                     <td><code>--size</code></td>
-                    <td>ドットのサイズ</td>
-                    <td>整数値で指定</td>
+                    <td>${t('Size of dots')}</td>
+                    <td>${t('Integer value')}</td>
                     <td><code>16</code></td>
                   </tr>
                   <tr>
                     <td><code>--gap</code></td>
-                    <td>ドット同士のすき間</td>
-                    <td>整数値で指定</td>
+                    <td>${t('Gap between dots')}</td>
+                    <td>${t('Integer value')}</td>
                     <td><code>1</code></td>
                   </tr>
                   <tr>
                     <td><code>--pretty-print</code></td>
-                    <td>出力する SVG を整形</td>
+                    <td>${t('Enable pretty-print output')}</td>
                     <td></td>
-                    <td>無効</td>
+                    <td>${t('Disabled')}</td>
                   </tr>
                   <tr>
                     <td><code>--version</code></td>
-                    <td>コマンドのバージョンを表示</td>
+                    <td>${t('Show version')}</td>
                   </tr>
                   <tr>
                     <td><code>--help</code></td>
-                    <td>コマンドのヘルプを表示</td>
+                    <td>${t('Show help')}</td>
                   </tr>
                 </tbody>
               </table>
               <dl class="mt-3 ps-3">
-                <dt>実行例</dt>
+                <dt>${t('Example command')}</dt>
                 <dd>
                   <code>$ scalable-dots --type=CIRCLE --size=32 --gap=0 --pretty-print input.png > output.svg</code>
                 </dd>

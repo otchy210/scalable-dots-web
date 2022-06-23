@@ -41,6 +41,38 @@ export const i18n = {
       'いま開いているこのページは ScalableDots ウェブ版ですが、その他の多くのオンラインツールとは異なり、ScalableDots は全ての処理をブラウザ内で完結しています。ファイルをアップロードする必要がないので高速で動作し、セキュリティ上の懸念もありません。',
     'Therefore, there is no limit to the size of the image to be processed, but the performance of the processing on the browser naturally depends on the computing resource of your machine.':
       'したがって処理を行う画像のサイズにも制限はありませんが、ブラウザ上での処理のパフォーマンスは当然ながらあなたが使っているパソコンあるいはスマホの処理能力に依存します。',
+    'Command line version': 'コマンドライン版',
+    'A command line version is also available for those who want to convert large images that are too heavy to process in a browser, or for those who want to convert a large number of files at once. Please consider using the command line version if necessary.':
+      'ブラウザで処理をするには重たいサイズの大きな画像や、大量のファイルをまとめて変換したい人のために、コマンドライン版も用意されています。必要に応じてコマンドライン版の利用も検討して下さい。',
+    'System requirement': 'システム要件',
+    'Node.js version 18 or later is required. Please <a href="https://www.google.com/search?q=Node.js+install" target="_blank">install</a> it in advance.':
+      'Node.js バージョン 18 以降が必要です。事前に<a href="https://www.google.com/search?q=Node.js+%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB" target="_blank">インストール</a>して下さい。',
+    'How to install': 'インストール方法',
+    'To install the command line version of ScalableDots, use <code>npm</code> command bundled with Node.js.':
+      'ScalableDots コマンドライン版のインストールには Node.js に同梱されているコマンドの <code>npm</code> を使います。',
+    'To install in a specific folder': '特定のフォルダにインストールする場合',
+    'To install for the entire system': 'システム全体にインストールする場合',
+    'How to run': '実行方法',
+    'The <code>scalable-dots</code> command writes the result of the conversion to SVG to standard output when an image file is passed as an argument, so redirect it to another file and save it.':
+      '<code>scalable-dots</code> コマンドは引数に画像ファイルを渡すと SVG に変換した結果を標準出力に書き出すので、それを別のファイルにリダイレクトして保存してください。',
+    'If installed in a specific folder': '特定のフォルダにインストールした場合',
+    'If installed for the entire system': 'システム全体にインストールした場合',
+    'Command line options': 'コマンドラインオプション',
+    'The <code>scalable-dots</code> command accepts the following options': '<code>scalable-dots</code> コマンドには以下のオプションを指定する事が出来ます。',
+    Option: 'オプション',
+    Description: '説明',
+    Note: '備考',
+    Default: 'デフォルト',
+    'Type of dots': 'ドットの種類',
+    '<code>SQUARE</code>, <code>CIRCLE</code>, or <code>RHOMBUS</code>': '<code>SQUARE</code>, <code>CIRCLE</code>, <code>RHOMBUS</code> のいずれか',
+    'Size of dots': 'ドットのサイズ',
+    'Integer value': '整数値',
+    'Gap between dots': 'ドット同士のすき間',
+    'Enable pretty-print output': '出力する SVG を整形',
+    Disabled: '無効',
+    'Show version': 'バージョンを表示',
+    'Show help': 'ヘルプを表示',
+    'Example command': 'コマンド例',
   },
   arr: {
     'sample-images': [
