@@ -1,5 +1,6 @@
 export const i18n = {
   lang: 'en',
+  locale: 'en_US',
   output: 'docs/en/',
   t: {
     'og:url': 'https://scalable-dots.otchy.net/en/',

@@ -1,5 +1,6 @@
 export const i18n = {
   lang: 'ja',
+  locale: 'ja_JP',
   output: 'docs/',
   t: {
     'The tool to generate scalable pixel art images': '綺麗に拡大出来るドット絵生成ツール',
@@ -73,6 +74,16 @@ export const i18n = {
     'Show version': 'バージョンを表示',
     'Show help': 'ヘルプを表示',
     'Example command': 'コマンド例',
+    Contact: 'お問い合わせ',
+    'ScalableDots is created, published and maintained by Otchy (<a href="https://www.otchy.net" target="_blank">personal blog</a>). If you have any bug reports or feature requests, please let us know via <a href="https://twitter.com/otchy" target="_blank">Twitter</a>.':
+      'ScalableDots は Otchy (<a href="https://www.otchy.net" target="_blank">個人ブログ</a>) が作成、公開、メンテナンスしています。不具合の報告や機能追加の要望などがあれば、<a href="https://twitter.com/otchy" target="_blank">Twitter</a> を通じてお伝えいただけると幸いです。',
+    'Credit for pixel art materials': 'ドット絵素材・サンプル画像提供',
+    'Supported browsers': 'サポートブラウザ',
+    'Git repositories': 'Git リポジトリ',
+    Technologies: '採用技術',
+    Tweet: 'ツイート',
+    'Add this page to Hatena bookmark': 'このエントリーをはてなブックマークに追加',
+    Share: 'シェアする',
   },
   arr: {
     'sample-images': [

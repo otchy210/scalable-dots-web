@@ -29,7 +29,7 @@ mkdirSync(i18n.output, { recursive: true });
 writeFileSync(
   output,
   `
-<html lang="ja">
+<html lang="${i18n.lang}">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -333,11 +333,11 @@ writeFileSync(
           </div>
           <div class="mt-3 col-12 offset-xl-1 col-xl-10 offset-xxl-0 col-xxl-4">
             <div class="panel">
-              <h3 class="icon icon-board">お問い合わせ</h3>
+              <h3 class="icon icon-board">${t('Contact')}</h3>
               <p>
-                ScalableDots は Otchy (<a href="https://www.otchy.net" target="_blank">個人ブログ</a>)
-                が作成、公開、メンテナンスしています。不具合の報告や機能追加の要望などがあれば、<a href="https://twitter.com/otchy" target="_blank">Twitter</a>
-                を通じてお伝えいただけると幸いです。
+                ${t(
+                  'ScalableDots is created, published and maintained by Otchy (<a href="https://www.otchy.net" target="_blank">personal blog</a>). If you have any bug reports or feature requests, please let us know via <a href="https://twitter.com/otchy" target="_blank">Twitter</a>.'
+                )}
               </p>
             </div>
           </div>
@@ -349,7 +349,7 @@ writeFileSync(
         <div class="row">
           <div class="col-12 col-sm-6 col-md-3">
             <dl>
-              <dt>ドット絵素材・サンプル画像提供</dt>
+              <dt>${t('Credit for pixel art materials')}</dt>
               <dd>
                 <a href="https://pipoya.net/" target="_blank">ぴぽや様</a>
               </dd>
@@ -366,7 +366,7 @@ writeFileSync(
           </div>
           <div class="col-12 col-sm-6 col-md-3">
             <dl>
-              <dt>サポートブラウザ</dt>
+              <dt>${t('Supported browsers')}</dt>
               <dd>
                 <a href="https://www.google.com/intl/ja_jp/chrome/" target="_blank">Google Chrome</a>
               </dd>
@@ -389,7 +389,7 @@ writeFileSync(
           </div>
           <div class="col-12 col-sm-6 col-md-3">
             <dl>
-              <dt>Git リポジトリ</dt>
+              <dt>${t('Git repositories')}</dt>
               <dd>
                 <a href="https://github.com/otchy210/scalable-dots-web" target="_blank">scalable-dots-web</a>
               </dd>
@@ -403,7 +403,7 @@ writeFileSync(
           </div>
           <div class="col-12 col-sm-6 col-md-3">
             <dl>
-              <dt>採用技術</dt>
+              <dt>${t('Technologies')}</dt>
               <dd>
                 <a href="https://docs.github.com/en/pages" target="_blank">GitHub Pages</a>
               </dd>
@@ -427,18 +427,18 @@ writeFileSync(
           </div>
           <div class="col-12 col-md-5 col-lg-6 col-xl-7 col-xxl-8 mt-2 mt-md-0 d-flex align-items-center">
             <div>
-              <a class="twitter-share-button" href="https://twitter.com/intent/tweet" data-via="otchy" data-hashtags="pixelart,ドット絵"> Tweet</a>
+              <a class="twitter-share-button" href="https://twitter.com/intent/tweet" data-via="otchy" data-hashtags="pixelart,ドット絵">${t('Tweet')}</a>
             </div>
             <div class="ms-2">
               <a
                 href="https://b.hatena.ne.jp/entry/"
                 class="hatena-bookmark-button"
                 data-hatena-bookmark-layout="basic-label"
-                data-hatena-bookmark-lang="ja"
-                title="このエントリーをはてなブックマークに追加"
+                data-hatena-bookmark-lang="${i18n.lang}"
+                title="${t('Add this page to Hatena bookmark')}"
                 ><img
                   src="https://b.st-hatena.com/images/v4/public/entry-button/button-only@2x.png"
-                  alt="このエントリーをはてなブックマークに追加"
+                  alt="${t('Add this page to Hatena bookmark')}"
                   width="20"
                   height="20"
                   style="border: none"
@@ -450,7 +450,7 @@ writeFileSync(
                   target="_blank"
                   href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fscalable-dots.otchy.net%2F&amp;src=sdkpreparse"
                   class="fb-xfbml-parse-ignore"
-                  >シェアする</a
+                  >${t('Share')}</a
                 >
               </div>
             </div>
@@ -517,7 +517,7 @@ writeFileSync(
       async
       defer
       crossorigin="anonymous"
-      src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v14.0&appId=1421586228272139&autoLogAppEvents=1"
+      src="https://connect.facebook.net/${i18n.locale}/sdk.js#xfbml=1&version=v14.0&appId=1421586228272139&autoLogAppEvents=1"
       nonce="Ea0OkAHn"
     ></script>
   </body>
