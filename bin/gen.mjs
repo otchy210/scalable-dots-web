@@ -75,9 +75,7 @@ writeFileSync(
                 </h1>
               </div>
             </div>
-            <div class="text-center pt-1 pb-3">
-              ${t('switch-lang')}
-            </div>
+            <div class="text-center pt-1 pb-3">${t('switch-lang')}</div>
           </div>
           <div class="col-12 col-sm-8 col-md-6 mb-3 mb-sm-0">
             <div class="dialog p-3">
@@ -462,12 +460,12 @@ writeFileSync(
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">サポートしていないファイルです</h5>
+            <h5 class="modal-title">${t('Unsupporte file type')}</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
           </div>
-          <div class="modal-body">ScalableDots がサポートしている画像ファイルは、PNG、JPEG、GIF、WebP のみです。</div>
+          <div class="modal-body">${t('ScalableDots supports only PNG, JPEG, GIF, and WebP image files.')}</div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">閉じる</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">${t('Close')}</button>
           </div>
         </div>
       </div>
@@ -476,17 +474,20 @@ writeFileSync(
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">比較的大きな画像ファイルです</h5>
+            <h5 class="modal-title">${t('Relatively large image file')}</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
           </div>
           <div class="modal-body">
-            ScalableDots
-            は全てブラウザ上で動作するため、処理を行う画像ファイルの大きさに制限はありません。どのくらいのサイズになると処理が重くなるか、最悪のケースでブラウザが固まってしまうかは、あなたが使っているパソコンあるいはスマホの処理能力に依存します。<br />
-            比較的大きな画像の処理を開始する際はこのような警告が念のため表示されますが、あなたの判断で処理を開始するのはもちろん構いません。<br />
+            ${t(
+              'ScalableDots does everything in the browser, so there is no limit to the size of the image to be processed. How large a file makes the process slow or, in the worst case, freezes your browser, depends on the computing resource of your machine.'
+            )}<br />
+            ${t(
+              'This warning appears as a reminder when starting to process relatively large images, but you may of course start processing at your own decision.'
+            )}<br />
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">止めておく</button>
-            <button type="button" id="file-size-info-proceed" class="btn btn-primary">処理を開始する</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">${t("Don't try")}</button>
+            <button type="button" id="file-size-info-proceed" class="btn btn-primary">${t('Start processing')}</button>
           </div>
         </div>
       </div>
@@ -495,17 +496,20 @@ writeFileSync(
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title text-danger">かなり大きな画像ファイルです</h5>
+            <h5 class="modal-title text-danger">${t('Fairly large image file')}</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
           </div>
           <div class="modal-body">
-            ScalableDots
-            は全てブラウザ上で動作するため、処理を行う画像ファイルの大きさに制限はありません。どのくらいのサイズになると処理が重くなるか、最悪のケースでブラウザが固まってしまうかは、あなたが使っているパソコンあるいはスマホの処理能力に依存します。<br />
-            あなたの判断で処理を開始する事は出来ますが、選択された画像はかなりサイズが大きいのでこのまま処理を進めることはお勧めしません。ブラウザ版よりも負荷の少ないコマンドライン版の利用をご検討下さい。<br />
+            ${t(
+              'ScalableDots does everything in the browser, so there is no limit to the size of the image to be processed. How large a file makes the process slow or, in the worst case, freezes your browser, depends on the computing resource of your machine.'
+            )}<br />
+            ${t(
+              "You can start processing at your decision, but it's not recommend because the selected image is quite large in size. Consider using the command line version which is lighter than the browser version."
+            )}<br />
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">止めておく</button>
-            <button type="button" id="file-size-warn-proceed" class="btn btn-primary">構わず処理を開始する</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">${t("Don't try")}</button>
+            <button type="button" id="file-size-warn-proceed" class="btn btn-primary">${t('Start processing anyway')}</button>
           </div>
         </div>
       </div>
@@ -522,5 +526,5 @@ writeFileSync(
     ></script>
   </body>
 </html>
-`.trim()
+`.trimStart()
 );

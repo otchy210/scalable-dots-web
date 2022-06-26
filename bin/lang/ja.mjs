@@ -84,6 +84,19 @@ export const i18n = {
     Tweet: 'ツイート',
     'Add this page to Hatena bookmark': 'このエントリーをはてなブックマークに追加',
     Share: 'シェアする',
+    'Unsupporte file type': 'サポートしていないファイルです',
+    'ScalableDots supports only PNG, JPEG, GIF, and WebP image files.': 'ScalableDots がサポートしている画像ファイルは、PNG、JPEG、GIF、WebP のみです。',
+    'Relatively large image file': '比較的大きな画像ファイルです',
+    'ScalableDots does everything in the browser, so there is no limit to the size of the image to be processed. How large a file makes the process slow or, in the worst case, freezes your browser, depends on the computing resource of your machine.':
+      'ScalableDots は全てブラウザ上で動作するため、処理を行う画像ファイルの大きさに制限はありません。どのくらいのサイズになると処理が重くなるか、最悪のケースでブラウザが固まってしまうかは、あなたが使っているパソコンあるいはスマホの処理能力に依存します。',
+    'This warning appears as a reminder when starting to process relatively large images, but you may of course start processing at your own decision.':
+      '比較的大きな画像の処理を開始する際はこのような警告が念のため表示されますが、あなたの判断で処理を開始するのはもちろん構いません。',
+    "Don't try": '止めておく',
+    'Start processing': '処理を開始する',
+    'Fairly large image file': 'かなり大きな画像ファイルです',
+    "You can start processing at your decision, but it's not recommend because the selected image is quite large in size. Consider using the command line version which is lighter than the browser version.":
+      'あなたの判断で処理を開始する事は出来ますが、選択された画像はかなりサイズが大きいのでこのまま処理を進めることはお勧めしません。ブラウザ版よりも負荷の少ないコマンドライン版の利用をご検討下さい。',
+    'Start processing anyway': '構わず処理を開始する',
   },
   arr: {
     'sample-images': [
