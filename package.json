@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build": "webpack",
+    "build": "webpack && npm run gen",
     "watch": "webpack -w",
+    "gen": "npm run gen:ja && npm run gen:en",
+    "gen:ja": "node bin/gen.mjs ja",
+    "gen:en": "node bin/gen.mjs en",
     "start": "webpack-dev-server",
     "serve": "npx http-server docs/",
     "test": "jest",
