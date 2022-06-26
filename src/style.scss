@@ -143,6 +143,9 @@ $form-range-track-bg: rgba(var(--bs-white-rgb), 0.7);
     overflow: auto;
   }
 }
+html[lang='ja'] .information p {
+  text-indent: 1em;
+}
 .information {
   background: linear-gradient($light, $white);
   h2 {
@@ -175,9 +178,6 @@ $form-range-track-bg: rgba(var(--bs-white-rgb), 0.7);
     &.icon-shop {
       background-image: url('/images/icon-shop.svg');
     }
-  }
-  p {
-    text-indent: 1em;
   }
   dl {
     dt {
