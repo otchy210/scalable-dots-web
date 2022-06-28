@@ -6,7 +6,7 @@ export const i18n = {
     'The tool to generate scalable pixel art images': '綺麗に拡大出来るドット絵生成ツール',
     'The tool to convert pixel art images such as PNG or GIF to SVG file. So that you can scale it with beautiful edges of each pixel. You can preview it on your browser as well as it provides command line tool.':
       'PNG や GIF などのドット絵 (Pixel art) を、拡大しても綺麗なまま表示出来る SVG ファイルに変換するツールです。ブラウザ上でプレビューを確認しながら変換できるほか、コマンドラインツールも提供しています。',
-    'og:url': 'https://scalable-dots.otchy.net',
+    url: 'https://scalable-dots.otchy.net',
     'switch-lang': '日本語 | <a href="/en/">English</a>',
     'Drop image files or<br />click to select': '画像ファイルをドロップ<br />もしくはクリックして選択',
     'Try sample images first?': 'とりあえずサンプル画像で試す？',

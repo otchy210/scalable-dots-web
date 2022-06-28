@@ -57,7 +57,7 @@ writeFileSync(
         'The tool to convert pixel art images such as PNG or GIF to SVG file. So that you can scale it with beautiful edges of each pixel. You can preview it on your browser as well as it provides command line tool.'
       )}"
     />
-    <meta property="og:url" content="${t('og:url')}" />
+    <meta property="og:url" content="${t('url')}" />
     <meta property="og:site_name" content="ScalableDots" />
     <meta property="og:image" content="https://scalable-dots.otchy.net/images/summary.png" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -446,10 +446,10 @@ writeFileSync(
               /></a>
             </div>
             <div class="ms-2">
-              <div class="fb-share-button" data-href="https://scalable-dots.otchy.net/" data-layout="button" data-size="small">
+              <div class="fb-share-button" data-href="${t('url')}" data-layout="button" data-size="small">
                 <a
                   target="_blank"
-                  href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fscalable-dots.otchy.net%2F&amp;src=sdkpreparse"
+                  href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(t('url'))}&amp;src=sdkpreparse"
                   class="fb-xfbml-parse-ignore"
                   >${t('Share')}</a
                 >
