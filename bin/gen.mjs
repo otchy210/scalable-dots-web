@@ -360,6 +360,9 @@ writeFileSync(
               <dd>
                 <a href="https://twitter.com/syuironoitokuzu" target="_blank">Akke様</a>
               </dd>
+              <dd>
+                <a href="https://twitter.com/jagaimo1020" target="_blank">じゃがいも様</a>
+              </dd>
             </dl>
           </div>
           <div class="col-12 col-sm-6 col-md-3">
